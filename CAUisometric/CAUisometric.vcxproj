@@ -144,6 +144,7 @@
     <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="constant_value.h" />
     <ClInclude Include="platform.h" />
     <ClInclude Include="Player.h" />
   </ItemGroup>

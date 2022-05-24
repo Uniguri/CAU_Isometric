@@ -1,4 +1,5 @@
 #pragma once
+#include "constant_value.h"
 #include <bangtal.h>
 
 struct Player
@@ -9,7 +10,7 @@ struct Player
 	int x, y;
 };
 
-void Player_timerCallback(TimerID timer, Player* player);
-void Player_keyboardCallback(KeyCode code, KeyState state, Player* player);
+void PlayerTimerCallback(TimerID timer, Player* player);
+void PlayerKeyboardCallback(KeyCode code, KeyState state, Player* player);
 
-void Player_init(Player* player, SceneID scene);
+void PlayerInit(Player* player, SceneID scene);

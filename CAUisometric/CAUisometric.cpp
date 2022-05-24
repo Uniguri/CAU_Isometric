@@ -23,22 +23,22 @@ int main() {
 	setTimerCallback(timerCallback);
 	setKeyboardCallback(keyboardCallback);
 
-	mainScene = createScene("main", "mainScene.png");
+	mainScene = createScene("main", "img/mainScene.png");
 
 	for (int i = 0; i < MAX_LEVEL; i++) {
-		randomCreatePlatform(base, i);
+		CreateRandomMap(base, i);
 	}
-	printPlatform(base, map, mainScene, 0);
-	Player_init(&player, mainScene);
+	ShowMap(base, map, mainScene, 0);
+	PlayerInit(&player, mainScene);
 	startGame(mainScene);
 }
 
 void timerCallback(TimerID timer) {
-	Player_timerCallback(timer, &player);
+	PlayerTimerCallback(timer, &player);
 }
 
 void keyboardCallback(KeyCode code, KeyState state) {
 
-	Player_keyboardCallback(code, state, &player);
+	PlayerKeyboardCallback(code, state, &player);
 
 }
