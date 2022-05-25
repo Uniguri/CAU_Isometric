@@ -6,7 +6,7 @@ const char const* TileFileName[MAX_LEVEL] = {
 };
 
 
-void ShowMap(int base[MAX_LEVEL][baseN + 1][baseM + 1], ObjectID map[MAX_LEVEL][MAX_HEIGHT][MAX_WIDTH], SceneID scene, int level) {
+void MakeMap(int base[MAX_LEVEL][baseN + 1][baseM + 1], ObjectID map[MAX_LEVEL][MAX_HEIGHT][MAX_WIDTH], const SceneID scene, const int level) {
 	for (int i = 1; i <= baseN; i++) {
 		for (int j = 1; j <= baseM; j++) {
 			if (base[level][i][j] == 1) {
@@ -14,10 +14,26 @@ void ShowMap(int base[MAX_LEVEL][baseN + 1][baseM + 1], ObjectID map[MAX_LEVEL][
 					for (int l = 1; l <= CHUNK_SIZE; l++) {
 						ObjectID obj = createObject(TileFileName[0]);
 						map[level][i * CHUNK_SIZE + k][j * CHUNK_SIZE + l] = obj;
-						locateObject(obj, scene, (((j + i - 2) * CHUNK_SIZE + l + k - 1) * TILE_WIDTH) * SCALE / 2, (((i - j + 1) * CHUNK_SIZE + k - l) * TILE_HEIGHT) * SCALE / 2);
+						Coord loc = TransformCoord(i, j, k, l, 0, 0);
+						locateObject(obj, scene, loc.x, loc.y);
 						scaleObject(obj, SCALE);
 						showObject(obj);
 					}
+				}
+			}
+		}
+	}
+}
+
+void MoveMap(ObjectID map[MAX_LEVEL][MAX_HEIGHT][MAX_WIDTH], ObjectID scene, int dx, int dy)
+{
+	for (int i = 1; i <= baseN; i++) {
+		for (int j = 1; j <= baseM; j++) {
+			for (int k = 1; k <= CHUNK_SIZE; k++) {
+				for (int l = 1; l <= CHUNK_SIZE; l++) {
+					ObjectID obj = map[0][i * CHUNK_SIZE + k][j * CHUNK_SIZE + l];
+					Coord loc = TransformCoord(i, j, k, l, dx, dy);
+					locateObject(obj, scene, loc.x, loc.y);
 				}
 			}
 		}

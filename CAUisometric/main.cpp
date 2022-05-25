@@ -28,13 +28,13 @@ int main() {
 	for (int i = 0; i < MAX_LEVEL; i++) {
 		CreateRandomMap(base, i);
 	}
-	ShowMap(base, map, mainScene, 0);
-	PlayerInit(&player, mainScene);
+	MakeMap(base, map, mainScene, 0);
+	InitPlayer(&player, mainScene);
 	startGame(mainScene);
 }
 
 void timerCallback(TimerID timer) {
-	PlayerTimerCallback(timer, &player);
+	PlayerTimerCallback(timer, &player, map);
 }
 
 void keyboardCallback(KeyCode code, KeyState state) {
