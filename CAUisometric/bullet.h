@@ -14,7 +14,7 @@ struct Bullet
 };
 
 void InitBullet(Bullet* bullet, SceneID scene, const int x, const int y, const int speed);
-void MoveBullet(Bullet* bullet, const int dx, const int dy);
+void MoveBullet(Bullet* bullet, const int additional_dx, const int additiona_dy);
 void RefreshBullet(Bullet* bullet);
 void DeleteBullet(Bullet* bullet);
 bool IsDeleted(Bullet* bullet)
