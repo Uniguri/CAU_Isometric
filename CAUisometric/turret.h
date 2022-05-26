@@ -13,6 +13,6 @@ struct Turret
 	int x, y;
 };
 
-void InitTurret(Turret* turret, SceneID scene, const int x, const int y);
+void InitTurret(Turret* turret, SceneID scene, const int x, const int y, const int inner_x, const int inner_y);
 void TurretFire(Turret* turret, Bullet* bullet);
 bool IsHitted(Turret* turret, Bullet* bullet);
