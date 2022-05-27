@@ -1,12 +1,18 @@
 #pragma once
 #define MAX_LEVEL 1
-#define MAX_HEIGHT 300
-#define MAX_WIDTH 300
-#define baseN 10
-#define baseM 10
+#define MAX_HEIGHT ((BASE_Y+1)*CHUNK_SIZE+1)
+#define MAX_WIDTH ((BASE_X+1)*CHUNK_SIZE+1)
+#define BASE_Y 10
+#define BASE_X 10
 #define CHUNK_SIZE 15
-#define TILE_SIZE 50
-#define TILE_WIDTH 38
-#define TILE_HEIGHT 23
-#define SCALE 2.0f
-#define blockLimit 50
+#define SCALE 3.0f
+#define BLOCK_LIMIT 50
+#define PLAYER_BASIC_X 640
+#define PLAYER_BASIC_Y 360
+#define TILE_SIZE (50*SCALE/2)
+#define TILE_WIDTH (38*SCALE/2)
+#define TILE_HEIGHT (23*SCALE/2)
+#define TILE_WIDTH_OFFSET_FROM_LEFT (4*SCALE/2)
+#define TILE_WIDTH_OFFSET_FROM_RIGHT (5*SCALE/2)
+#define TILE_HEIGHT_OFFSET_FROM_DOWN (26*SCALE/2)
+#define TILE_HEIGHT_OFFSET_FROM_UP (1*SCALE/2)

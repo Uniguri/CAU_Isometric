@@ -4,6 +4,11 @@ struct Coord
 	int x, y;
 };
 
+struct Vec2d
+{
+	double x, y;
+};
+
 // 0이 왼쪽 아래, 1이 오른쪽 아래, 2가 오른쪽 위, 3은 왼쪽 위임.
 struct Square
 {

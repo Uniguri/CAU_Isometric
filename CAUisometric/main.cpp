@@ -2,7 +2,7 @@
 #include "Player.h"
 
 ObjectID map[MAX_LEVEL][MAX_HEIGHT][MAX_WIDTH];
-int base[MAX_LEVEL][baseN + 1][baseM + 1];
+int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1];
 
 SceneID mainScene;
 
@@ -34,7 +34,7 @@ int main() {
 }
 
 void timerCallback(TimerID timer) {
-	PlayerTimerCallback(timer, &player, map);
+	PlayerTimerCallback(timer, &player, map, base);
 }
 
 void keyboardCallback(KeyCode code, KeyState state) {

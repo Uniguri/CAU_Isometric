@@ -8,7 +8,7 @@ struct Bullet
 	ObjectID obj;
 	SceneID scene;
 	int x, y;
-        int dx, dy;
+	int dx, dy;
 	int speed;
 	bool is_deleted;
 };
