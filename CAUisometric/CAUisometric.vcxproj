@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="bullet.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="platform.cpp" />
     <ClCompile Include="Player.cpp" />

@@ -1,5 +1,6 @@
 #include "platform.h"
 #include "Player.h"
+#include "bullet.h"
 
 ObjectID map[MAX_LEVEL][MAX_HEIGHT][MAX_WIDTH];
 int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1];
@@ -7,6 +8,7 @@ int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1];
 SceneID mainScene;
 
 Player player;
+Bullet bullets[100] = {0};
 
 void timerCallback(TimerID timer);
 void keyboardCallback(KeyCode code, KeyState state);
@@ -28,6 +30,11 @@ int main() {
 	for (int i = 0; i < MAX_LEVEL; i++) {
 		CreateRandomMap(base, i);
 	}
+	for (int i = 0; i < MAX_NUMBER_OF_BULLET; ++i)
+	{
+		InitBullet(bullets + i, mainScene);
+	}
+	InitBulletSystem();
 	MakeMap(base, map, mainScene, 0);
 	InitPlayer(&player, mainScene);
 	startGame(mainScene);
@@ -35,6 +42,7 @@ int main() {
 
 void timerCallback(TimerID timer) {
 	PlayerTimerCallback(timer, &player, map, base);
+	BulletTimerCallback(timer, bullets, -player.x, -player.y);
 }
 
 void keyboardCallback(KeyCode code, KeyState state) {

@@ -1,7 +1,7 @@
 #include "player.h"
 #include "platform.h"
 
-TimerID playerMoveTimer;
+TimerID player_timer;
 
 void InitPlayer(Player* player, const SceneID scene) {
     player->obj = createObject("t.png");
@@ -12,11 +12,10 @@ void InitPlayer(Player* player, const SceneID scene) {
     locateObject(player->obj, scene, PLAYER_BASIC_X, PLAYER_BASIC_Y);
     showObject(player->obj);
 
-    playerMoveTimer = createTimer(0.01f);
-    startTimer(playerMoveTimer);
+    player_timer = createTimer(0.01f);
+    startTimer(player_timer);
 }
 
-extern ObjectID mainScene;
 bool IsOutOfMap(Player* player, const int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1], const int level)
 {
     Coord player_loc = {PLAYER_BASIC_X, PLAYER_BASIC_Y };
@@ -57,37 +56,46 @@ bool IsOutOfMap(Player* player, const int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1
     return false;
 }
 
+void PlayerHitted(Player* player, const Bullet* bullet)
+{
+
+}
+
 void PlayerKeyboardCallback(KeyCode code, KeyState state, Player* player) {
     if (code == KeyCode::KEY_UP_ARROW) {
         if (state == KeyState::KEY_PRESSED)
             player->dy += player->speed;
         else player->dy -= player->speed;
+        return;
     }
     if (code == KeyCode::KEY_RIGHT_ARROW) {
         if (state == KeyState::KEY_PRESSED)
             player->dx += player->speed;
         else player->dx -= player->speed;
+        return;
     }
     if (code == KeyCode::KEY_DOWN_ARROW) {
         if (state == KeyState::KEY_PRESSED)
             player->dy -= player->speed;
         else player->dy += player->speed;
+        return;
     }
     if (code == KeyCode::KEY_LEFT_ARROW) {
         if (state == KeyState::KEY_PRESSED)
             player->dx -= player->speed;
         else player->dx += player->speed;
+        return;
     }
 }
 
 void PlayerTimerCallback(TimerID timer, Player* player, ObjectID map[MAX_LEVEL][MAX_HEIGHT][MAX_WIDTH], const int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1]) {
-    if (timer == playerMoveTimer) {
+    if (timer == player_timer) {
         player->x += player->dx;
         player->y += player->dy;
         MoveMap(map, player->scene, 0, player->x, player->y);
         if (IsOutOfMap(player, base, 0))
             printf("Out of map: %lld, %ld\n", time(NULL), clock());
-        setTimer(playerMoveTimer, 0.01f);
-        startTimer(playerMoveTimer);
+        setTimer(player_timer, 0.01f);
+        startTimer(player_timer);
     }
 }
