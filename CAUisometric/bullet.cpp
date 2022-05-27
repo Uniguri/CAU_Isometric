@@ -42,8 +42,8 @@ void SetBullet(Bullet* bullet, SceneID scene, const int x, const int y, const in
 	bullet->y = y;
 	bullet->speed = speed;
 	double len = sqrt(pow(direction_vec.x, 2) + pow(direction_vec.y, 2));
-	//bullet->direction_vec = { speed * direction_vec.x / len, speed * direction_vec.y / len };
-	bullet->direction_vec = { direction_vec.x, direction_vec.y};
+	bullet->direction_vec = { speed * direction_vec.x / len, speed * direction_vec.y / len };
+	//bullet->direction_vec = { direction_vec.x, direction_vec.y};
 	bullet->is_deleted = false;
 
 	scaleObject(bullet->obj, SCALE / 2);
@@ -56,8 +56,12 @@ void MoveBullet(Bullet* bullet, const int additional_dx, const int additional_dy
 	if (bullet->is_deleted)
 		return;
 
-	bullet->x += bullet->speed * bullet->direction_vec.x + additional_dx;
-	bullet->y += bullet->speed * bullet->direction_vec.y+ additional_dy;
+	Vec2d dir_vec = bullet->direction_vec;
+
+	float sign_of_f = (dir_vec.x >= 0) ? 1 : -1;
+	bullet->x += sign_of_f * pow(dir_vec.x,2) + additional_dx;
+	sign_of_f = (dir_vec.y >= 0) ? 1 : -1;
+	bullet->y += sign_of_f * pow(dir_vec.y,2) + additional_dy;
 
 	Coord loc = TransformCoord(BASE_X, BASE_Y, CHUNK_SIZE - 1, CHUNK_SIZE - 1, 0, 0);
 	if (bullet->x < 0 || bullet->x > loc.x)

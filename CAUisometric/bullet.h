@@ -11,7 +11,7 @@ struct Bullet
 	ObjectID obj;
 	SceneID scene;
 	Vec2d direction_vec;
-	int x, y;
+	double x, y;
 	int speed;
 	bool is_deleted;
 };
