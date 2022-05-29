@@ -6,6 +6,11 @@
 #include "types.h"
 #include "utility.h"
 
+enum BulletType :unsigned char
+{
+	BULLET = 0, BULLET_TYPE_SIZE
+};
+
 struct Bullet
 {
 	ObjectID obj;
@@ -22,5 +27,6 @@ void InitBullet(Bullet* bullet, SceneID scene);
 void InitBulletSystem(void);
 void DeleteBullet(Bullet* bullet);
 void SetBullet(Bullet* bullet, SceneID scene, const int x, const int y, const int speed, const Vec2d direction_vec);
+void ChangeBulletType(Bullet* bullet, BulletType type);
 void MoveBullet(Bullet* bullet, const int additional_dx, const int additional_dy);
 void RefreshBullet(Bullet* bullet, const int additional_dx, const int additional_dy);
