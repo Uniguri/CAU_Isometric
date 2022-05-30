@@ -1,6 +1,7 @@
 #include "platform.h"
 #include "Player.h"
 #include "bullet.h"
+#include "turret.h"
 
 ObjectID map[MAX_LEVEL][MAX_HEIGHT][MAX_WIDTH];
 int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1], level = 0;
@@ -9,6 +10,7 @@ SceneID gameScene[MAX_LEVEL];
 
 Player player;
 Bullet bullets[100] = {0};
+Turret turrets[MAX_LEVEL][MAX_NUMBER_OF_TURRET];
 
 void timerCallback(TimerID timer);
 void keyboardCallback(KeyCode code, KeyState state);
@@ -38,12 +40,15 @@ int main() {
 	for (int i = 0; i < MAX_LEVEL; i++) {
 		MakeMap(base, map, gameScene[i], i);
 	}
+	for (int i = 0; i < MAX_LEVEL; i++) {
+		InitTurret(turrets, gameScene[i], base, i);
+	}
 	InitPlayer(&player, gameScene[0]);
 	startGame(gameScene[level]);
 }
 
 void timerCallback(TimerID timer) {
-	PlayerTimerCallback(timer, &player, map, base, &level, gameScene);
+	PlayerTimerCallback(timer, &player, map, base, &level, gameScene, turrets);
 	BulletTimerCallback(timer, bullets, -player.x, -player.y);
 }
 

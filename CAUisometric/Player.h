@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include "constant_value.h"
 #include "bullet.h"
+#include "turret.h"
 
 #define NUMBER_OF_PLAYER_IDLE_IMAGE_FOR_EACH_DIR 16
 #define NUMBER_OF_PLAYER_MOVE_IMAGE_FOR_EACH_DIR 17
@@ -32,7 +33,7 @@ struct Player
 	bool is_dead;
 };
 
-void PlayerTimerCallback(TimerID timer, Player* player, ObjectID map[MAX_LEVEL][MAX_HEIGHT][MAX_WIDTH], const int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1], int* level, SceneID scene[MAX_LEVEL]);
+void PlayerTimerCallback(TimerID timer, Player* player, ObjectID map[MAX_LEVEL][MAX_HEIGHT][MAX_WIDTH], const int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1], int* level, SceneID scene[MAX_LEVEL], Turret turrets[MAX_LEVEL][MAX_NUMBER_OF_TURRET]);
 void PlayerKeyboardCallback(KeyCode code, KeyState state, Player* player);
 
 void RefreshPlayer(Player* player);

@@ -1,5 +1,6 @@
 #include "player.h"
 #include "platform.h"
+#include "turret.h"
 
 const char* const PlayerIdleImages[DirectionOfPlayerFace::DIRECTION_OF_PLAYER_FACE_SIZE][NUMBER_OF_PLAYER_IDLE_IMAGE_FOR_EACH_DIR] =
 {
@@ -627,10 +628,9 @@ void RefreshPlayer(Player* player)
         setObjectImage(player->obj, PlayerAttackImages[player->direction][player->image_frame]);
         break;
     }
-
 }
 
-void PlayerTimerCallback(TimerID timer, Player* player, ObjectID map[MAX_LEVEL][MAX_HEIGHT][MAX_WIDTH], const int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1], int* level, SceneID scene[MAX_LEVEL]) {
+void PlayerTimerCallback(TimerID timer, Player* player, ObjectID map[MAX_LEVEL][MAX_HEIGHT][MAX_WIDTH], const int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1], int* level, SceneID scene[MAX_LEVEL], Turret turrets[MAX_LEVEL][MAX_NUMBER_OF_TURRET]) {
     if (timer == player_timer) {
         if (player->state != PlayerState::ATTACK)
         {
@@ -638,11 +638,12 @@ void PlayerTimerCallback(TimerID timer, Player* player, ObjectID map[MAX_LEVEL][
             player->y += player->dy;
         }
         MoveMap(map, player->scene, *level, player->x, player->y);
+        MoveTurret(turrets, player->x, player->y, base, *level);
         RefreshPlayer(player);
         if (IsOutOfMap(player, base, *level)) {
-            printf("Out of map: %lld, %ld\n", time(NULL), clock());
+            //printf("Out of map: %lld, %ld\n", time(NULL), clock());
             (*level)++;
-            if(*level >= MAX_LEVEL) (*level) = 0;
+            if (*level >= MAX_LEVEL) *level = 0;
             ResetPlayer(player, scene[*level]);
             enterScene(scene[*level]);
         }
