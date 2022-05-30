@@ -32,7 +32,7 @@ struct Player
 	bool is_dead;
 };
 
-void PlayerTimerCallback(TimerID timer, Player* player, ObjectID map[MAX_LEVEL][MAX_HEIGHT][MAX_WIDTH], const int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1]);
+void PlayerTimerCallback(TimerID timer, Player* player, ObjectID map[MAX_LEVEL][MAX_HEIGHT][MAX_WIDTH], const int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1], int* level, SceneID scene[MAX_LEVEL]);
 void PlayerKeyboardCallback(KeyCode code, KeyState state, Player* player);
 
 void RefreshPlayer(Player* player);
@@ -40,6 +40,8 @@ void RefreshPlayer(Player* player);
 void InitPlayer(Player* player, const SceneID scene);
 
 bool IsOutOfMap(Player* player, const int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1], const int level);
+
+void ResetPlayer(Player* player, const SceneID scene);
 
 void PlayerAttack(Player* player);
 void PlayerHitted(Player* player, const Bullet* bullet);

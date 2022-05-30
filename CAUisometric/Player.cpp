@@ -511,6 +511,18 @@ bool IsOutOfMap(Player* player, const int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1
     return false;
 }
 
+void ResetPlayer(Player* player, SceneID scene) {
+    player->scene = scene;
+    player->image_frame = 0;
+    player->image_frame_counter = 0;
+    player->speed = PLAYER_BASIC_SPEED;
+    player->x = 0;
+    player->y = 0;
+    locateObject(player->obj, scene, PLAYER_X, PLAYER_Y);
+    scaleObject(player->obj, PLAYER_SCALE);
+    showObject(player->obj);
+}
+
 void PlayerHitted(Player* player, const Bullet* bullet)
 {
 
@@ -618,17 +630,22 @@ void RefreshPlayer(Player* player)
 
 }
 
-void PlayerTimerCallback(TimerID timer, Player* player, ObjectID map[MAX_LEVEL][MAX_HEIGHT][MAX_WIDTH], const int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1]) {
+void PlayerTimerCallback(TimerID timer, Player* player, ObjectID map[MAX_LEVEL][MAX_HEIGHT][MAX_WIDTH], const int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1], int* level, SceneID scene[MAX_LEVEL]) {
     if (timer == player_timer) {
         if (player->state != PlayerState::ATTACK)
         {
             player->x += player->dx;
             player->y += player->dy;
         }
-        MoveMap(map, player->scene, 0, player->x, player->y);
+        MoveMap(map, player->scene, *level, player->x, player->y);
         RefreshPlayer(player);
-        if (IsOutOfMap(player, base, 0))
+        if (IsOutOfMap(player, base, *level)) {
             printf("Out of map: %lld, %ld\n", time(NULL), clock());
+            (*level)++;
+            if(*level >= MAX_LEVEL) (*level) = 0;
+            ResetPlayer(player, scene[*level]);
+            enterScene(scene[*level]);
+        }
         setTimer(player_timer, 0.01f);
         startTimer(player_timer);
     }

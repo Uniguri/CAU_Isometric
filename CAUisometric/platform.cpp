@@ -2,7 +2,11 @@
 
 
 const char* TileFileName[MAX_LEVEL] = {
-	"img/tiles/assets_pixel_50x50/isometric_pixel_9999.png"
+	"img/tiles/assets_pixel_50x50/isometric_pixel_9995.png",
+	"img/tiles/assets_pixel_50x50/isometric_pixel_9994.png",
+	"img/tiles/assets_pixel_50x50/isometric_pixel_9996.png",
+	"img/tiles/assets_pixel_50x50/isometric_pixel_9997.png",
+	"img/tiles/assets_pixel_50x50/isometric_pixel_9998.png"
 };
 
 
@@ -12,8 +16,7 @@ void MakeMap(int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1], ObjectID map[MAX_LEVEL
 			if (base[level][i][j] == 1) {
 				for (int k = 0; k < CHUNK_SIZE; k++) {
 					for (int l = 0; l < CHUNK_SIZE; l++) {
-						ObjectID obj = createObject(TileFileName[0]);
-
+						ObjectID obj = createObject(TileFileName[level]);
 						map[level][i * CHUNK_SIZE + k][j * CHUNK_SIZE + l] = obj;
 						Coord loc = TransformCoord(j, i, l, k, 0, 0);
 						locateObject(obj, scene, loc.x, loc.y);

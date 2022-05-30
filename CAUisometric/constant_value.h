@@ -1,5 +1,5 @@
 #pragma once
-#define MAX_LEVEL 1
+#define MAX_LEVEL 5
 #define MAX_HEIGHT ((BASE_Y+1)*CHUNK_SIZE+1)
 #define MAX_WIDTH ((BASE_X+1)*CHUNK_SIZE+1)
 #define BASE_Y 10
