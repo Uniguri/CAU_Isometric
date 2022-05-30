@@ -44,6 +44,8 @@ bool IsOutOfMap(Player* player, const int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1
 
 void ResetPlayer(Player* player, const SceneID scene);
 
+void MoveLevelAnimation(Player* player);
+
 void PlayerAttack(Player* player);
 void PlayerHitted(Player* player, const Bullet* bullet);
 bool IsDead(Player* player);

@@ -452,7 +452,11 @@ const char* const PlayerAttackImages[DirectionOfPlayerFace::DIRECTION_OF_PLAYER_
         "img/players/isometric_Mini-Crusader/attack/crusader_attack_70017.png"
     }
 };
-TimerID player_timer;
+TimerID player_timer, moveAnimationTimer;
+ObjectID animation1 = createObject("img/moveanimation.png"), animation2 = createObject("img/moveanimation.png");
+SceneID moveScene = createScene("", "img/mainScene.png");
+int animation1_Y = 360, animation2_Y = -360, cnt = 0;
+bool isMovingLevel = false;
 
 void InitPlayer(Player* player, const SceneID scene) {
     player->obj = createObject(PlayerIdleImages[DirectionOfPlayerFace::DOWN][0]);
@@ -470,6 +474,8 @@ void InitPlayer(Player* player, const SceneID scene) {
 
     player_timer = createTimer(0.01f);
     startTimer(player_timer);
+
+    moveAnimationTimer = createTimer(0.01f);
 }
 
 bool IsOutOfMap(Player* player, const int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1], const int level)
@@ -513,7 +519,10 @@ bool IsOutOfMap(Player* player, const int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1
 }
 
 void ResetPlayer(Player* player, SceneID scene) {
+    setObjectImage(player->obj, PlayerIdleImages[DirectionOfPlayerFace::DOWN][0]);
     player->scene = scene;
+    player->state = PlayerState::IDLE;
+    player->direction = DirectionOfPlayerFace::DOWN;
     player->image_frame = 0;
     player->image_frame_counter = 0;
     player->speed = PLAYER_BASIC_SPEED;
@@ -640,14 +649,60 @@ void PlayerTimerCallback(TimerID timer, Player* player, ObjectID map[MAX_LEVEL][
         MoveMap(map, player->scene, *level, player->x, player->y);
         MoveTurret(turrets, player->x, player->y, base, *level);
         RefreshPlayer(player);
-        if (IsOutOfMap(player, base, *level)) {
-            //printf("Out of map: %lld, %ld\n", time(NULL), clock());
+        if (IsOutOfMap(player, base, *level) && !isMovingLevel) {
+            printf("Out of map: %lld, %ld\n", time(NULL), clock());
             (*level)++;
-            if (*level >= MAX_LEVEL) *level = 0;
+            (*level) %= MAX_LEVEL;
+            isMovingLevel = true;
+            MoveLevelAnimation(player);
+        }
+        else {
+            setTimer(player_timer, 0.01f);
+            startTimer(player_timer);
+        }
+    }
+    if (timer == moveAnimationTimer) {
+        cnt++;
+        animation1_Y += 10;
+        animation2_Y += 10;
+        if (animation1_Y >= 720) animation1_Y = -720;
+        if (animation2_Y >= 720) animation2_Y = -720;
+        locateObject(animation1, moveScene, 0, animation1_Y);
+        locateObject(animation2, moveScene, 0, animation2_Y);
+        RefreshPlayer(player);
+        if (cnt < 50) {
+            setTimer(moveAnimationTimer, 0.01f);
+            startTimer(moveAnimationTimer);
+        }
+        else {
+            cnt = 0;
+            isMovingLevel = false;
             ResetPlayer(player, scene[*level]);
+            printf("%d\n", *level);
+            setTimer(player_timer, 0.01f);
+            startTimer(player_timer);
             enterScene(scene[*level]);
         }
-        setTimer(player_timer, 0.01f);
-        startTimer(player_timer);
     }
+}
+
+void MoveLevelAnimation(Player* player) {
+    locateObject(animation1, moveScene, 0, animation1_Y);
+    locateObject(animation2, moveScene, 0, animation2_Y);
+    showObject(animation1);
+    showObject(animation2);
+    setObjectImage(player->obj, PlayerIdleImages[DirectionOfPlayerFace::DOWN][0]);
+    player->scene = moveScene;
+    player->state = PlayerState::WALK;
+    player->direction = DirectionOfPlayerFace::DOWN;
+    player->image_frame = 0;
+    player->image_frame_counter = 0;
+    player->speed = PLAYER_BASIC_SPEED;
+    player->x = 0;
+    player->y = 0;
+    locateObject(player->obj, moveScene, PLAYER_X, PLAYER_Y);
+    scaleObject(player->obj, PLAYER_SCALE);
+    showObject(player->obj);
+    startTimer(moveAnimationTimer);
+    enterScene(moveScene);
 }
