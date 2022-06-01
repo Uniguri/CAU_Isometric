@@ -33,6 +33,16 @@ struct Player
 	bool is_dead;
 };
 
+struct heart_struct
+{
+	SceneID scene;
+	ObjectID heart[5];
+	int heart_y = 500, heart_x[5] = { 565, 595, 625, 655, 685 };
+	int num_heart = 5;
+};
+void heart_function();
+void ShowHeart();
+
 void PlayerTimerCallback(TimerID timer);
 void PlayerKeyboardCallback(KeyCode code, KeyState state);
 

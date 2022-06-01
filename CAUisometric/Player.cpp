@@ -7,6 +7,7 @@ extern Player player;
 extern SceneID gameScene[MAX_LEVEL];
 extern Bullet bullets[100];
 extern Turret turrets[MAX_LEVEL][MAX_NUMBER_OF_TURRET];
+extern heart_struct heart;
 
 const char* const PlayerIdleImages[DirectionOfPlayerFace::DIRECTION_OF_PLAYER_FACE_SIZE][NUMBER_OF_PLAYER_IDLE_IMAGE_FOR_EACH_DIR] =
 {
@@ -464,6 +465,35 @@ SceneID moveScene = createScene("", "img/mainScene.png");
 int animation1_Y = 360, animation2_Y = -360, cnt = 0;
 bool isMovingLevel = false;
 
+void heart_function() {
+    heart.scene = gameScene[level];
+    for (int i = 0; i < 5; i++) {
+        heart.heart[i] = createObject("img/heart.png");
+        locateObject(heart.heart[i], heart.scene, heart.heart_x[i], heart.heart_y);
+
+    }
+}
+
+//맵 바뀌는 함수에 넣어서 맵 바뀔 때 숨겨진 하트 다시 보이게하고 heart구조체의 멤버 num_heart 5로 초기화
+void ShowHeart() {
+    for (int i = 0; i < 5; i++) {
+        heart.scene = gameScene[level];
+        locateObject(heart.heart[i], heart.scene, heart.heart_x[i], heart.heart_y);
+        showObject(heart.heart[i]);
+    }
+}
+
+//넉백(피격 시 호출되는 함수 내에서 호출)
+void MinusHeart() {
+    for (int i = 0; i < 5; i++) {
+        if (heart.num_heart == i)
+            hideObject(heart.heart[i]);
+    }
+    if (heart.num_heart == 0)
+        showMessage("게임 끝");
+    heart.num_heart--;
+}
+
 void InitPlayer() {
     player.obj = createObject(PlayerIdleImages[DirectionOfPlayerFace::DOWN][0]);
     player.scene = gameScene[level];
@@ -655,6 +685,7 @@ void PlayerTimerCallback(TimerID timer) {
         MoveMap(player.x, player.y);
         MoveTurret(player.x, player.y);
         RefreshPlayer();
+        ShowHeart();
         if (IsOutOfMap() && !isMovingLevel) {
             printf("Out of map: %lld, %ld\n", time(NULL), clock());
             level++;
@@ -693,6 +724,9 @@ void PlayerTimerCallback(TimerID timer) {
 }
 
 void MoveLevelAnimation() {
+    for (int i = 0; i < 5; i++) {
+        hideObject(heart.heart[i]);
+    }
     locateObject(animation1, moveScene, 0, animation1_Y);
     locateObject(animation2, moveScene, 0, animation2_Y);
     showObject(animation1);
@@ -710,5 +744,6 @@ void MoveLevelAnimation() {
     scaleObject(player.obj, PLAYER_SCALE);
     showObject(player.obj);
     startTimer(moveAnimationTimer);
+    heart_function();
     enterScene(moveScene);
 }

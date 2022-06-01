@@ -12,6 +12,8 @@ Player player;
 Bullet bullets[100] = {0};
 Turret turrets[MAX_LEVEL][MAX_NUMBER_OF_TURRET];
 
+heart_struct heart;
+
 void timerCallback(TimerID timer);
 void keyboardCallback(KeyCode code, KeyState state);
 
@@ -41,6 +43,7 @@ int main() {
 	MakeMap();
 	InitTurret();
 	InitPlayer();
+	heart_function();
 	startGame(gameScene[level]);
 }
 
