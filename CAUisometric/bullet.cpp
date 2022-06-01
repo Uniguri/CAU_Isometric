@@ -6,8 +6,14 @@ extern Bullet bullets[100];
 
 
 TimerID bullet_timer;
+
 const char* BULLET_IMAGE[] = {
-	"t.png"
+	"img/bullets/All_Fire_Bullet_Pixel/mint_bullet.png",
+	"img/bullets/All_Fire_Bullet_Pixel/ice_bullet.png",
+	"img/bullets/All_Fire_Bullet_Pixel/gray_bullet.png",
+	"img/bullets/All_Fire_Bullet_Pixel/purple_bullet.png",
+	"img/bullets/All_Fire_Bullet_Pixel/red_bullet.png",
+	"img/bullets/All_Fire_Bullet_Pixel/white_bullet.png"
 };
 void BulletTimerCallback(TimerID timer, const int dx, const int dy)
 {
