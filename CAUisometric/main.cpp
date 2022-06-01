@@ -28,32 +28,29 @@ int main() {
 	setKeyboardCallback(keyboardCallback);
 
 
-	for (int i = 0; i < MAX_LEVEL; i++) {
-		gameScene[i] = createScene("main", "img/mainScene.png");
-		CreateRandomMap(base, i);
+	for (level = 0; level < MAX_LEVEL; level++) {
+		gameScene[level] = createScene("main", "img/mainScene.png");
+		CreateRandomMap();
 	}
+	level = 0;
 	for (int i = 0; i < MAX_NUMBER_OF_BULLET; ++i)
 	{
-		InitBullet(bullets + i, gameScene[0]);
+		InitBullet(i);
 	}
 	InitBulletSystem();
-	for (int i = 0; i < MAX_LEVEL; i++) {
-		MakeMap(base, map, gameScene[i], i);
-	}
-	for (int i = 0; i < MAX_LEVEL; i++) {
-		InitTurret(turrets, gameScene[i], base, i);
-	}
-	InitPlayer(&player, gameScene[0]);
+	MakeMap();
+	InitTurret();
+	InitPlayer();
 	startGame(gameScene[level]);
 }
 
 void timerCallback(TimerID timer) {
-	PlayerTimerCallback(timer, &player, map, base, &level, gameScene, turrets);
-	BulletTimerCallback(timer, bullets, -player.x, -player.y);
+	PlayerTimerCallback(timer);
+	BulletTimerCallback(timer, -player.x, -player.y);
 }
 
 void keyboardCallback(KeyCode code, KeyState state) {
 
-	PlayerKeyboardCallback(code, state, &player);
+	PlayerKeyboardCallback(code, state);
 
 }

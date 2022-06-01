@@ -16,8 +16,8 @@ struct Turret
 	int inner_x, inner_y;
 };
 
-void InitTurret(Turret turrets[MAX_LEVEL][MAX_NUMBER_OF_TURRET], SceneID scene, int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1], int level);
-void MoveTurret(Turret turrets[MAX_LEVEL][MAX_NUMBER_OF_TURRET], const int dx, const int dy, const int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1], int level);
+void InitTurret();
+void MoveTurret(const int dx, const int dy);
 
-void TurretFire(Turret* turret, Bullet* bullet);
-bool IsHitted(Turret* turret, Bullet* bullet);
+void TurretFire();
+bool IsHitted();

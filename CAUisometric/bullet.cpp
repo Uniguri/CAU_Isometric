@@ -1,26 +1,30 @@
 #include "bullet.h"
 
+extern int level;
+extern SceneID gameScene[MAX_LEVEL];
+extern Bullet bullets[100];
+
 TimerID bullet_timer;
 const char* BULLET_IMAGE[] = {
 	"t.png"
 };
-void BulletTimerCallback(TimerID timer, Bullet bullets[MAX_NUMBER_OF_BULLET], const int dx, const int dy)
+void BulletTimerCallback(TimerID timer, const int dx, const int dy)
 {
 	if (timer != bullet_timer)
 		return;
 
 	for (int i = 0; i < MAX_NUMBER_OF_BULLET; ++i)
-		RefreshBullet(bullets + i, dx, dy);
+		RefreshBullet(dx, dy, i);
 
 	setTimer(bullet_timer, 0.01f);
 	startTimer(bullet_timer);
 }
 
-void InitBullet(Bullet* bullet, SceneID scene)
+void InitBullet(int i)
 {
-	bullet->obj = createObject(BULLET_IMAGE[0]);
-	bullet->scene = scene;
-	DeleteBullet(bullet);
+	bullets[i].obj = createObject(BULLET_IMAGE[0]);
+	bullets[i].scene = gameScene[level];
+	DeleteBullet(i);
 }
 
 void InitBulletSystem(void)
@@ -29,50 +33,50 @@ void InitBulletSystem(void)
 	startTimer(bullet_timer);
 }
 
-void DeleteBullet(Bullet* bullet)
+void DeleteBullet(int i)
 {
-	bullet->is_deleted = true;
-	hideObject(bullet->obj);
+	bullets[i].is_deleted = true;
+	hideObject(bullets[i].obj);
 }
 
-void SetBullet(Bullet* bullet, SceneID scene, const int x, const int y, const int speed, const Vec2d direction_vec)
+void SetBullet(const int x, const int y, const int speed, const Vec2d direction_vec, int i)
 {
-	bullet->scene = scene;
-	bullet->x = x;
-	bullet->y = y;
-	bullet->speed = speed;
+	bullets[i].scene = gameScene[level];
+	bullets[i].x = x;
+	bullets[i].y = y;
+	bullets[i].speed = speed;
 	double len = sqrt(pow(direction_vec.x, 2) + pow(direction_vec.y, 2));
-	bullet->direction_vec = { speed * direction_vec.x / len, speed * direction_vec.y / len };
-	//bullet->direction_vec = { direction_vec.x, direction_vec.y};
-	bullet->is_deleted = false;
+	bullets[i].direction_vec = { speed * direction_vec.x / len, speed * direction_vec.y / len };
+	//bullets[i].direction_vec = { direction_vec.x, direction_vec.y};
+	bullets[i].is_deleted = false;
 
-	scaleObject(bullet->obj, SCALE / 2);
-	locateObject(bullet->obj, scene, x, y);
-	showObject(bullet->obj);
+	scaleObject(bullets[i].obj, SCALE / 2);
+	locateObject(bullets[i].obj, gameScene[level], x, y);
+	showObject(bullets[i].obj);
 }
 
-void MoveBullet(Bullet* bullet, const int additional_dx, const int additional_dy)
+void MoveBullet(const int additional_dx, const int additional_dy, int i)
 {
-	if (bullet->is_deleted)
+	if (bullets[i].is_deleted)
 		return;
 
-	Vec2d dir_vec = bullet->direction_vec;
+	Vec2d dir_vec = bullets[i].direction_vec;
 
 	float sign_of_f = (dir_vec.x >= 0) ? 1 : -1;
-	bullet->x += sign_of_f * pow(dir_vec.x,2) + additional_dx;
+	bullets[i].x += sign_of_f * pow(dir_vec.x,2) + additional_dx;
 	sign_of_f = (dir_vec.y >= 0) ? 1 : -1;
-	bullet->y += sign_of_f * pow(dir_vec.y,2) + additional_dy;
+	bullets[i].y += sign_of_f * pow(dir_vec.y,2) + additional_dy;
 
 	Coord loc = TransformCoord(BASE_X, BASE_Y, CHUNK_SIZE - 1, CHUNK_SIZE - 1, 0, 0);
-	if (bullet->x < 0 || bullet->x > loc.x)
-		DeleteBullet(bullet);
+	if (bullets[i].x < 0 || bullets[i].x > loc.x)
+		DeleteBullet(i);
 	loc = TransformCoord(0, BASE_Y, CHUNK_SIZE - 1, CHUNK_SIZE - 1, 0, 0);
-	if (bullet->y < 0 || bullet->y > loc.y)
-		DeleteBullet(bullet);
+	if (bullets[i].y < 0 || bullets[i].y > loc.y)
+		DeleteBullet(i);
 }
 
-void RefreshBullet(Bullet* bullet, const int additional_dx, const int additional_dy)
+void RefreshBullet(const int additional_dx, const int additional_dy, int i)
 {
-	MoveBullet(bullet, 0, 0);
-	locateObject(bullet->obj, bullet->scene, bullet->x + additional_dx, bullet->y + additional_dy);
+	MoveBullet(0, 0, i);
+	locateObject(bullets[i].obj, bullets[i].scene, bullets[i].x + additional_dx, bullets[i].y + additional_dy);
 }

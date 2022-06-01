@@ -33,19 +33,19 @@ struct Player
 	bool is_dead;
 };
 
-void PlayerTimerCallback(TimerID timer, Player* player, ObjectID map[MAX_LEVEL][MAX_HEIGHT][MAX_WIDTH], const int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1], int* level, SceneID scene[MAX_LEVEL], Turret turrets[MAX_LEVEL][MAX_NUMBER_OF_TURRET]);
-void PlayerKeyboardCallback(KeyCode code, KeyState state, Player* player);
+void PlayerTimerCallback(TimerID timer);
+void PlayerKeyboardCallback(KeyCode code, KeyState state);
 
-void RefreshPlayer(Player* player);
+void RefreshPlayer();
 
-void InitPlayer(Player* player, const SceneID scene);
+void InitPlayer();
 
-bool IsOutOfMap(Player* player, const int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1], const int level);
+bool IsOutOfMap();
 
-void ResetPlayer(Player* player, const SceneID scene);
+void ResetPlayer();
 
-void MoveLevelAnimation(Player* player);
+void MoveLevelAnimation();
 
-void PlayerAttack(Player* player);
-void PlayerHitted(Player* player, const Bullet* bullet);
-bool IsDead(Player* player);
+void PlayerAttack();
+void PlayerHitted();
+bool IsDead();

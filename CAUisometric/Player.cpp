@@ -1,6 +1,12 @@
 #include "player.h"
 #include "platform.h"
 #include "turret.h"
+extern ObjectID map[MAX_LEVEL][MAX_HEIGHT][MAX_WIDTH];
+extern int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1], level;
+extern Player player;
+extern SceneID gameScene[MAX_LEVEL];
+extern Bullet bullets[100];
+extern Turret turrets[MAX_LEVEL][MAX_NUMBER_OF_TURRET];
 
 const char* const PlayerIdleImages[DirectionOfPlayerFace::DIRECTION_OF_PLAYER_FACE_SIZE][NUMBER_OF_PLAYER_IDLE_IMAGE_FOR_EACH_DIR] =
 {
@@ -458,19 +464,19 @@ SceneID moveScene = createScene("", "img/mainScene.png");
 int animation1_Y = 360, animation2_Y = -360, cnt = 0;
 bool isMovingLevel = false;
 
-void InitPlayer(Player* player, const SceneID scene) {
-    player->obj = createObject(PlayerIdleImages[DirectionOfPlayerFace::DOWN][0]);
-    player->scene = scene;
-    player->state = PlayerState::IDLE;
-    player->direction = DirectionOfPlayerFace::DOWN;
-    player->image_frame = 0;
-    player->image_frame_counter = 0;
-    player->speed = PLAYER_BASIC_SPEED;
-    player->x = 0;
-    player->y = 0;
-    locateObject(player->obj, scene, PLAYER_X, PLAYER_Y);
-    scaleObject(player->obj, PLAYER_SCALE);
-    showObject(player->obj);
+void InitPlayer() {
+    player.obj = createObject(PlayerIdleImages[DirectionOfPlayerFace::DOWN][0]);
+    player.scene = gameScene[level];
+    player.state = PlayerState::IDLE;
+    player.direction = DirectionOfPlayerFace::DOWN;
+    player.image_frame = 0;
+    player.image_frame_counter = 0;
+    player.speed = PLAYER_BASIC_SPEED;
+    player.x = 0;
+    player.y = 0;
+    locateObject(player.obj, gameScene[level], PLAYER_X, PLAYER_Y);
+    scaleObject(player.obj, PLAYER_SCALE);
+    showObject(player.obj);
 
     player_timer = createTimer(0.01f);
     startTimer(player_timer);
@@ -478,7 +484,7 @@ void InitPlayer(Player* player, const SceneID scene) {
     moveAnimationTimer = createTimer(0.01f);
 }
 
-bool IsOutOfMap(Player* player, const int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1], const int level)
+bool IsOutOfMap()
 {
     Coord player_loc = {PLAYER_BASIC_X, PLAYER_BASIC_Y };
 
@@ -489,7 +495,7 @@ bool IsOutOfMap(Player* player, const int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1
             if (base[level][y][x]) continue;
 
             Coord points[4] = { 0 };
-            Coord d_coord = { player->x, player->y };
+            Coord d_coord = { player.x, player.y };
             points[0] = TransformCoord({ x, y }, { 0, 0 }, d_coord);
             points[1] = TransformCoord({ x, y }, { 0, CHUNK_SIZE - 1 }, d_coord);
             points[2] = TransformCoord({ x, y }, { CHUNK_SIZE - 1, CHUNK_SIZE - 1 }, d_coord);
@@ -518,143 +524,143 @@ bool IsOutOfMap(Player* player, const int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1
     return false;
 }
 
-void ResetPlayer(Player* player, SceneID scene) {
-    setObjectImage(player->obj, PlayerIdleImages[DirectionOfPlayerFace::DOWN][0]);
-    player->scene = scene;
-    player->state = PlayerState::IDLE;
-    player->direction = DirectionOfPlayerFace::DOWN;
-    player->image_frame = 0;
-    player->image_frame_counter = 0;
-    player->speed = PLAYER_BASIC_SPEED;
-    player->x = 0;
-    player->y = 0;
-    locateObject(player->obj, scene, PLAYER_X, PLAYER_Y);
-    scaleObject(player->obj, PLAYER_SCALE);
-    showObject(player->obj);
+void ResetPlayer() {
+    setObjectImage(player.obj, PlayerIdleImages[DirectionOfPlayerFace::DOWN][0]);
+    player.scene = gameScene[level];
+    player.state = PlayerState::IDLE;
+    player.direction = DirectionOfPlayerFace::DOWN;
+    player.image_frame = 0;
+    player.image_frame_counter = 0;
+    player.speed = PLAYER_BASIC_SPEED;
+    player.x = 0;
+    player.y = 0;
+    locateObject(player.obj, gameScene[level], PLAYER_X, PLAYER_Y);
+    scaleObject(player.obj, PLAYER_SCALE);
+    showObject(player.obj);
 }
 
-void PlayerHitted(Player* player, const Bullet* bullet)
+void PlayerHitted()
 {
 
 }
 
-void PlayerKeyboardCallback(KeyCode code, KeyState state, Player* player) {
+void PlayerKeyboardCallback(KeyCode code, KeyState state) {
     if (code == KeyCode::KEY_UP_ARROW) {
         if (state == KeyState::KEY_PRESSED)
-            player->dy += player->speed;
+            player.dy += player.speed;
         else
-            player->dy -= player->speed;
+            player.dy -= player.speed;
     }
     else if (code == KeyCode::KEY_RIGHT_ARROW) {
         if (state == KeyState::KEY_PRESSED)
-            player->dx += player->speed;
+            player.dx += player.speed;
         else
-            player->dx -= player->speed;
+            player.dx -= player.speed;
     }
     else if (code == KeyCode::KEY_DOWN_ARROW) {
         if (state == KeyState::KEY_PRESSED)
-            player->dy -= player->speed;
+            player.dy -= player.speed;
         else
-            player->dy += player->speed;
+            player.dy += player.speed;
     }
     else if (code == KeyCode::KEY_LEFT_ARROW) {
         if (state == KeyState::KEY_PRESSED)
-            player->dx -= player->speed;
+            player.dx -= player.speed;
         else
-            player->dx += player->speed;
+            player.dx += player.speed;
     }
     else if (code == KeyCode::KEY_SPACE)
     {
         if (state == KeyState::KEY_PRESSED)
         {
-            player->state = PlayerState::ATTACK;
-            player->image_frame = 0;
+            player.state = PlayerState::ATTACK;
+            player.image_frame = 0;
         }
         return;
     }
 
-    int dx = player->dx, dy = player->dy;
+    int dx = player.dx, dy = player.dy;
     if (dx < 0 && dy < 0)
-        player->direction = DirectionOfPlayerFace::LEFT_DOWN;
+        player.direction = DirectionOfPlayerFace::LEFT_DOWN;
     else if (dx < 0 && dy > 0)
-        player->direction = DirectionOfPlayerFace::UP_LEFT;
+        player.direction = DirectionOfPlayerFace::UP_LEFT;
     else if (dx > 0 && dy < 0)
-        player->direction = DirectionOfPlayerFace::DOWN_RIGHT;
+        player.direction = DirectionOfPlayerFace::DOWN_RIGHT;
     else if (dx > 0 && dy > 0)
-        player->direction = DirectionOfPlayerFace::RIGHT_UP;
+        player.direction = DirectionOfPlayerFace::RIGHT_UP;
     else if (dx == 0 && dy < 0)
-        player->direction = DirectionOfPlayerFace::DOWN;
+        player.direction = DirectionOfPlayerFace::DOWN;
     else if (dx == 0 && dy > 0)
-        player->direction = DirectionOfPlayerFace::UP;
+        player.direction = DirectionOfPlayerFace::UP;
     else if (dx > 0 && dy == 0)
-        player->direction = DirectionOfPlayerFace::RIGHT;
+        player.direction = DirectionOfPlayerFace::RIGHT;
     else if (dx < 0 && dy == 0)
-        player->direction = DirectionOfPlayerFace::LEFT;
+        player.direction = DirectionOfPlayerFace::LEFT;
 
-    if (player->state == PlayerState::ATTACK)
+    if (player.state == PlayerState::ATTACK)
         return;
 
     if (dx == 0 && dy == 0)
-        player->state = PlayerState::IDLE;
+        player.state = PlayerState::IDLE;
     else
-        player->state = PlayerState::WALK;
+        player.state = PlayerState::WALK;
 }
 
-void RefreshPlayer(Player* player)
+void RefreshPlayer()
 {
-    ++player->image_frame_counter;
-    if (player->image_frame_counter <= 3)
+    ++player.image_frame_counter;
+    if (player.image_frame_counter <= 3)
         return;
 
-    player->image_frame_counter = 0;
-    ++player->image_frame;
-    switch (player->state)
+    player.image_frame_counter = 0;
+    ++player.image_frame;
+    switch (player.state)
     {
     case PlayerState::IDLE:
-        if (player->image_frame >= NUMBER_OF_PLAYER_IDLE_IMAGE_FOR_EACH_DIR)
-            player->image_frame = 0;
-        setObjectImage(player->obj, PlayerIdleImages[player->direction][player->image_frame]);
+        if (player.image_frame >= NUMBER_OF_PLAYER_IDLE_IMAGE_FOR_EACH_DIR)
+            player.image_frame = 0;
+        setObjectImage(player.obj, PlayerIdleImages[player.direction][player.image_frame]);
         break;
     case PlayerState::WALK:
-        if (player->image_frame >= NUMBER_OF_PLAYER_MOVE_IMAGE_FOR_EACH_DIR)
-            player->image_frame = 0;
-        setObjectImage(player->obj, PlayerMoveImages[player->direction][player->image_frame]);
+        if (player.image_frame >= NUMBER_OF_PLAYER_MOVE_IMAGE_FOR_EACH_DIR)
+            player.image_frame = 0;
+        setObjectImage(player.obj, PlayerMoveImages[player.direction][player.image_frame]);
         break;
     case PlayerState::ATTACK:
-        if (player->image_frame >= NUMBER_OF_PLAYER_ATTACK_IMAGE_FOR_EACH_DIR)
+        if (player.image_frame >= NUMBER_OF_PLAYER_ATTACK_IMAGE_FOR_EACH_DIR)
         {
-            player->image_frame = 0;
-            if (!player->dx && !player->dy)
+            player.image_frame = 0;
+            if (!player.dx && !player.dy)
             {
-                player->state = PlayerState::IDLE;
+                player.state = PlayerState::IDLE;
             }
             else
             {
-                player->state = PlayerState::WALK;
+                player.state = PlayerState::WALK;
             }
-            player->speed = PLAYER_BASIC_SPEED;
+            player.speed = PLAYER_BASIC_SPEED;
         }
-        setObjectImage(player->obj, PlayerAttackImages[player->direction][player->image_frame]);
+        setObjectImage(player.obj, PlayerAttackImages[player.direction][player.image_frame]);
         break;
     }
 }
 
-void PlayerTimerCallback(TimerID timer, Player* player, ObjectID map[MAX_LEVEL][MAX_HEIGHT][MAX_WIDTH], const int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1], int* level, SceneID scene[MAX_LEVEL], Turret turrets[MAX_LEVEL][MAX_NUMBER_OF_TURRET]) {
+void PlayerTimerCallback(TimerID timer) {
     if (timer == player_timer) {
-        if (player->state != PlayerState::ATTACK)
+        if (player.state != PlayerState::ATTACK)
         {
-            player->x += player->dx;
-            player->y += player->dy;
+            player.x += player.dx;
+            player.y += player.dy;
         }
-        MoveMap(map, player->scene, *level, player->x, player->y);
-        MoveTurret(turrets, player->x, player->y, base, *level);
-        RefreshPlayer(player);
-        if (IsOutOfMap(player, base, *level) && !isMovingLevel) {
+        MoveMap(player.x, player.y);
+        MoveTurret(player.x, player.y);
+        RefreshPlayer();
+        if (IsOutOfMap() && !isMovingLevel) {
             printf("Out of map: %lld, %ld\n", time(NULL), clock());
-            (*level)++;
-            (*level) %= MAX_LEVEL;
+            level++;
+            level %= MAX_LEVEL;
             isMovingLevel = true;
-            MoveLevelAnimation(player);
+            MoveLevelAnimation();
         }
         else {
             setTimer(player_timer, 0.01f);
@@ -669,7 +675,7 @@ void PlayerTimerCallback(TimerID timer, Player* player, ObjectID map[MAX_LEVEL][
         if (animation2_Y >= 720) animation2_Y = -720;
         locateObject(animation1, moveScene, 0, animation1_Y);
         locateObject(animation2, moveScene, 0, animation2_Y);
-        RefreshPlayer(player);
+        RefreshPlayer();
         if (cnt < 50) {
             setTimer(moveAnimationTimer, 0.01f);
             startTimer(moveAnimationTimer);
@@ -677,32 +683,32 @@ void PlayerTimerCallback(TimerID timer, Player* player, ObjectID map[MAX_LEVEL][
         else {
             cnt = 0;
             isMovingLevel = false;
-            ResetPlayer(player, scene[*level]);
-            printf("%d\n", *level);
+            ResetPlayer();
+            printf("%d\n", level);
             setTimer(player_timer, 0.01f);
             startTimer(player_timer);
-            enterScene(scene[*level]);
+            enterScene(gameScene[level]);
         }
     }
 }
 
-void MoveLevelAnimation(Player* player) {
+void MoveLevelAnimation() {
     locateObject(animation1, moveScene, 0, animation1_Y);
     locateObject(animation2, moveScene, 0, animation2_Y);
     showObject(animation1);
     showObject(animation2);
-    setObjectImage(player->obj, PlayerIdleImages[DirectionOfPlayerFace::DOWN][0]);
-    player->scene = moveScene;
-    player->state = PlayerState::WALK;
-    player->direction = DirectionOfPlayerFace::DOWN;
-    player->image_frame = 0;
-    player->image_frame_counter = 0;
-    player->speed = PLAYER_BASIC_SPEED;
-    player->x = 0;
-    player->y = 0;
-    locateObject(player->obj, moveScene, PLAYER_X, PLAYER_Y);
-    scaleObject(player->obj, PLAYER_SCALE);
-    showObject(player->obj);
+    setObjectImage(player.obj, PlayerIdleImages[DirectionOfPlayerFace::DOWN][0]);
+    player.scene = moveScene;
+    player.state = PlayerState::WALK;
+    player.direction = DirectionOfPlayerFace::DOWN;
+    player.image_frame = 0;
+    player.image_frame_counter = 0;
+    player.speed = PLAYER_BASIC_SPEED;
+    player.x = 0;
+    player.y = 0;
+    locateObject(player.obj, moveScene, PLAYER_X, PLAYER_Y);
+    scaleObject(player.obj, PLAYER_SCALE);
+    showObject(player.obj);
     startTimer(moveAnimationTimer);
     enterScene(moveScene);
 }

@@ -21,12 +21,12 @@ struct Bullet
 	bool is_deleted;
 };
 
-void BulletTimerCallback(TimerID timer, Bullet bullets[MAX_NUMBER_OF_BULLET], const int dx, const int dy);
+void BulletTimerCallback(TimerID timer, const int dx, const int dy);
 
-void InitBullet(Bullet* bullet, SceneID scene);
+void InitBullet(int i);
 void InitBulletSystem(void);
-void DeleteBullet(Bullet* bullet);
-void SetBullet(Bullet* bullet, SceneID scene, const int x, const int y, const int speed, const Vec2d direction_vec);
-void ChangeBulletType(Bullet* bullet, BulletType type);
-void MoveBullet(Bullet* bullet, const int additional_dx, const int additional_dy);
-void RefreshBullet(Bullet* bullet, const int additional_dx, const int additional_dy);
+void DeleteBullet(int i);
+void SetBullet(const int x, const int y, const int speed, const Vec2d direction_vec, int i);
+void ChangeBulletType(BulletType type);
+void MoveBullet(const int additional_dx, const int additional_dy, int i);
+void RefreshBullet(const int additional_dx, const int additional_dy, int i);
