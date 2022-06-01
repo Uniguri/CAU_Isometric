@@ -82,3 +82,41 @@ void TurretFire() {
 //bool IsHitted() {
 // 
 //}
+
+//
+//bool isnearPlayer(Turret turrets[MAX_LEVEL][MAX_NUMBER_OF_TURRET], const int dx, const int dy, int level) {
+//    for (int i = 0; ; i++) {
+//        if (turrets[level][i].obj == 0) break;
+//        Coord loc = TransformCoord(turrets[level][i].x, turrets[level][i].y, turrets[level][i].inner_x, turrets[level][i].inner_y, dx, dy);
+//        int rx = loc.x - PLAYER_BASIC_X, ry = loc.y - PLAYER_BASIC_Y;
+//        int r = sqrt(pow(rx, 2) + pow(ry, 2));
+//        if (-100 < r < 100) {
+//            return true;
+//        }
+//    }
+//    return false;
+//}
+//
+//bool isnearAttack(Turret turrets[MAX_LEVEL][MAX_NUMBER_OF_TURRET], const int dx, const int dy, int level) {
+//    /*for (int i = 0; ; i++) {
+//        if (turrets[level][i].obj == 0) break;
+//        Coord loc = TransformCoord(turrets[level][i].x, turrets[level][i].y, turrets[level][i].inner_x, turrets[level][i].inner_y, dx, dy);
+//        int rx = loc.x - PLAYER_BASIC_X, ry = loc.y - PLAYER_BASIC_Y;
+//        int r = sqrt(pow(rx, 2) + pow(ry, 2));
+//        if (-10 < r < 10) {
+//            return true;
+//        }
+//    }*/
+//    return false;
+//}
+//
+//bool IsHitted(Turret turrets[MAX_LEVEL][MAX_NUMBER_OF_TURRET], Bullet* bullet, int level) {
+//    /* for (int i = 0; ; i++) {
+//         if (turrets[level][i].obj == 0) break;
+//         if (isnearAttack) {
+//             hideObject(turrets[level][i].obj);
+//             return true;
+//         }
+//     }*/
+//    return false;
+//}

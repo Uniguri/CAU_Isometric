@@ -4,6 +4,7 @@ extern int level;
 extern SceneID gameScene[MAX_LEVEL];
 extern Bullet bullets[100];
 
+
 TimerID bullet_timer;
 const char* BULLET_IMAGE[] = {
 	"t.png"
