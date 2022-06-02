@@ -40,6 +40,6 @@
 
 #define PI 3.14159
 // unit is sec
-#define TURRET_FIRE_LATE 1
+#define TURRET_FIRE_LATE (3)
 #define TurretRange 500
 #define PlayerRange 500

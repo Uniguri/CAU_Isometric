@@ -585,7 +585,10 @@ int IsPlayerHitted()
 
         int x = bullets[i].x;
         int y = bullets[i].y;
-        if (IsCollision({ x + 1,y + 8 }, 4, box))
+        if (IsCollision({ x + 1,y + 8 }, 4, box)  ||
+            IsCollision({ x + 14,y + 8 }, 4, box) || 
+            IsCollision({ x + 7,y + 1 }, 4, box)  || 
+            IsCollision({ x + 7,y + 14 }, 4, box))
             return i;
     }
     return -1;
@@ -711,20 +714,9 @@ void PlayerTimerCallback(TimerID timer) {
         MoveMap(player.x, player.y);
         MoveTurret(player.x, player.y);
         RefreshPlayer();
-        ShowHeart();
-        if (IsOutOfMap() && !isMovingLevel) {
-            printf("Out of map: %lld, %ld\n", time(NULL), clock());
-            level++;
-            level %= MAX_LEVEL;
-            isMovingLevel = true;
-            MoveLevelAnimation();
-        }
-        else {
-            setTimer(player_timer, 0.01f);
-            startTimer(player_timer);
-        }
 
-        if (int index_of_bullet = IsPlayerHitted() != -1)
+        int index_of_bullet = IsPlayerHitted();
+        if (index_of_bullet != -1)
         {
             MinusHeart();
             int dx = PLAYER_BASIC_X - bullets[index_of_bullet].x;
@@ -747,6 +739,19 @@ void PlayerTimerCallback(TimerID timer) {
                     MoveBullet(-move_x, -move_y, i);
             }
         }
+        ShowHeart();
+        if (IsOutOfMap() && !isMovingLevel) {
+            printf("Out of map: %lld, %ld\n", time(NULL), clock());
+            level++;
+            level %= MAX_LEVEL;
+            isMovingLevel = true;
+            MoveLevelAnimation();
+        }
+        else {
+            setTimer(player_timer, 0.01f);
+            startTimer(player_timer);
+        }
+
     }
     if (timer == moveAnimationTimer) {
         cnt++;

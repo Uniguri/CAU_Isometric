@@ -13,12 +13,12 @@ void InitTurret() {
         int idx = 0;
         for (int i = 1; i < BASE_Y; i++) {
             for (int j = 1; j < BASE_X; j++) {
-                if (base[m][i][j] == 1) {
+                if (base[m][i][j] == 1 && base[m][i - 1][j - 1] == 1) {
                     int pickCnt = rand() % 100, cnt = 0;
-                    if (pickCnt < 40) cnt = 1;
+                    if (pickCnt < 40) cnt = 3;
                     else if (40 <= pickCnt && pickCnt < 50) cnt = 2;
                     for (int k = 0; k < cnt; k++) {
-                        Coord tmp = { rand() % CHUNK_SIZE, rand() % CHUNK_SIZE };
+                        Coord tmp = { 1 + rand() % (CHUNK_SIZE - 1), 1 + rand() % (CHUNK_SIZE)-1 };
                         turrets[m][idx].obj = createObject("img/turret.png");
                         turrets[m][idx].scene = gameScene[m];
                         turrets[m][idx].x = j;
