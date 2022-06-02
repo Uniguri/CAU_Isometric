@@ -2,7 +2,7 @@
 
 extern int level;
 extern SceneID gameScene[MAX_LEVEL];
-extern Bullet bullets[100];
+extern Bullet bullets[MAX_NUMBER_OF_BULLET];
 
 
 TimerID bullet_timer;
@@ -53,7 +53,7 @@ void SetBullet(const int x, const int y, const int speed, const Vec2d direction_
 	bullets[i].y = y;
 	bullets[i].speed = speed;
 	double len = sqrt(pow(direction_vec.x, 2) + pow(direction_vec.y, 2));
-	bullets[i].direction_vec = { speed * direction_vec.x / len, speed * direction_vec.y / len };
+	bullets[i].direction_vec = { sqrt(speed) * direction_vec.x / len, sqrt(speed) * direction_vec.y / len };
 	//bullets[i].direction_vec = { direction_vec.x, direction_vec.y};
 	bullets[i].is_deleted = false;
 
@@ -84,6 +84,6 @@ void MoveBullet(const int additional_dx, const int additional_dy, int i)
 
 void RefreshBullet(const int additional_dx, const int additional_dy, int i)
 {
-	MoveBullet(0, 0, i);
-	locateObject(bullets[i].obj, bullets[i].scene, bullets[i].x + additional_dx, bullets[i].y + additional_dy);
+	MoveBullet(additional_dx, additional_dy, i);
+	locateObject(bullets[i].obj, bullets[i].scene, bullets[i].x, bullets[i].y);
 }

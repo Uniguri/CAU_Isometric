@@ -14,6 +14,8 @@ struct Turret
 	SceneID scene;
 	int x, y;
 	int inner_x, inner_y;
+	time_t fire_late;
+	time_t last_fire_time;
 	bool active = true;
 };
 
