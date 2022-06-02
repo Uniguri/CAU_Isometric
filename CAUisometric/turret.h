@@ -14,10 +14,14 @@ struct Turret
 	SceneID scene;
 	int x, y;
 	int inner_x, inner_y;
+	bool active = true;
 };
 
 void InitTurret();
 void MoveTurret(const int dx, const int dy);
 
-void TurretFire();
-bool IsHitted();
+void TurretFire(const int dx, const int dy, int i);
+
+bool isnearPlayer(const int dx, const int dy, int range, int i);
+
+void isTurretHitted(int i);

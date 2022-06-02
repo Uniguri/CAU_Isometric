@@ -1,9 +1,20 @@
 #include "turret.h"
+#include "Player.h"
+
 
 extern int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1], level;
 extern SceneID gameScene[MAX_LEVEL];
 extern Bullet bullets[100];
 extern Turret turrets[MAX_LEVEL][MAX_NUMBER_OF_TURRET];
+extern Player player;
+Vec2d getDegree(double y, double x) {
+    Vec2d degree;
+    degree.x = x;
+    degree.y = y;
+    return degree;
+    //return atan2(y, x) * 180 / PI;
+}
+
 //struct Turret
 //{
 //   ObjectID obj;
@@ -46,77 +57,38 @@ void InitTurret() {
 
 void MoveTurret(const int dx, const int dy) {
     //640 360
-    for(int i = 0; ; i++){
+    for(int i = 0; i < MAX_NUMBER_OF_BULLET; i++){
         if (turrets[level][i].obj == 0) break;
         Coord loc = TransformCoord(turrets[level][i].x, turrets[level][i].y, turrets[level][i].inner_x, turrets[level][i].inner_y, dx, dy);
         locateObject(turrets[level][i].obj, turrets[level][i].scene, loc.x, loc.y);
+        if (turrets[level][i].active && isnearPlayer(player.x, player.y, TurretRange, i))TurretFire(dx, dy, i);
     }
 }
 
-void TurretFire() {
-    /*int cnt = 1;
-    set <Coord> randcoord[BASE_Y + 1][BASE_X + 1];
-    for (int i = 1; i < BASE_Y; i++) {
-       for (int j = 1; j < BASE_X; j++) {
-          if (base[level][i][j] == 1) {
-             while (randcoord[i][j].size() < cnt) {
-                if (-100 < turrets[cnt].x + dx - 640 && turrets[cnt].x + dx - 640 < 100 && -50 < turrets[cnt].y + dy - 360 && turrets[cnt].y + dy - 360 < 50) {
-                   if (code == KeyCode::KEY_SPACE)
-                   {
-                      if (state == KeyState::KEY_PRESSED)
-                      {
-                         player->state = PlayerState::ATTACK;
-                         player->image_frame = 0;
-                      }
-
-                }
-             }
-          }
-       }
-    }
-
- */
-
+void TurretFire(const int dx, const int dy, int i) {
+        Coord loc = TransformCoord(turrets[level][i].x, turrets[level][i].y, turrets[level][i].inner_x, turrets[level][i].inner_y, dx, dy);
+        SetBullet(loc.x, loc.y, 2 * PLAYER_BASIC_SPEED, getDegree(PLAYER_BASIC_X - loc.x, PLAYER_BASIC_Y - loc.y), i);
 }
 
-//bool IsHitted() {
-// 
-//}
+////////////////////////
+bool isnearPlayer(const int dx, const int dy, int range, int i) {
+    Coord loc = TransformCoord(turrets[level][i].x, turrets[level][i].y, turrets[level][i].inner_x, turrets[level][i].inner_y, dx, dy);
+    int rx = loc.x - PLAYER_BASIC_X, ry = loc.y - PLAYER_BASIC_Y;
+    int r = sqrt(pow(rx, 2) + pow(ry, 2));
+    printf("turret %d, x : %d, y : %d, dist : %d\n", i, loc.x, loc.y, r);
+    if (r < range) {
+        printf("================%d=================\n", r);
+        return true;
+        
+    }
+    return false;
+}
 
-//
-//bool isnearPlayer(Turret turrets[MAX_LEVEL][MAX_NUMBER_OF_TURRET], const int dx, const int dy, int level) {
-//    for (int i = 0; ; i++) {
-//        if (turrets[level][i].obj == 0) break;
-//        Coord loc = TransformCoord(turrets[level][i].x, turrets[level][i].y, turrets[level][i].inner_x, turrets[level][i].inner_y, dx, dy);
-//        int rx = loc.x - PLAYER_BASIC_X, ry = loc.y - PLAYER_BASIC_Y;
-//        int r = sqrt(pow(rx, 2) + pow(ry, 2));
-//        if (-100 < r < 100) {
-//            return true;
-//        }
-//    }
-//    return false;
-//}
-//
-//bool isnearAttack(Turret turrets[MAX_LEVEL][MAX_NUMBER_OF_TURRET], const int dx, const int dy, int level) {
-//    /*for (int i = 0; ; i++) {
-//        if (turrets[level][i].obj == 0) break;
-//        Coord loc = TransformCoord(turrets[level][i].x, turrets[level][i].y, turrets[level][i].inner_x, turrets[level][i].inner_y, dx, dy);
-//        int rx = loc.x - PLAYER_BASIC_X, ry = loc.y - PLAYER_BASIC_Y;
-//        int r = sqrt(pow(rx, 2) + pow(ry, 2));
-//        if (-10 < r < 10) {
-//            return true;
-//        }
-//    }*/
-//    return false;
-//}
-//
-//bool IsHitted(Turret turrets[MAX_LEVEL][MAX_NUMBER_OF_TURRET], Bullet* bullet, int level) {
-//    /* for (int i = 0; ; i++) {
-//         if (turrets[level][i].obj == 0) break;
-//         if (isnearAttack) {
-//             hideObject(turrets[level][i].obj);
-//             return true;
-//         }
-//     }*/
-//    return false;
-//}
+
+
+void isTurretHitted(int i) {
+    turrets[level][i].active = false;
+    hideObject(turrets[level][i].obj);
+    printf("aya\n");
+    return;
+}

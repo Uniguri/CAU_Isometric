@@ -157,9 +157,9 @@ const char* const PlayerIdleImages[DirectionOfPlayerFace::DIRECTION_OF_PLAYER_FA
     }
 
 };
-const char* const PlayerMoveImages[DirectionOfPlayerFace::DIRECTION_OF_PLAYER_FACE_SIZE][NUMBER_OF_PLAYER_MOVE_IMAGE_FOR_EACH_DIR] = 
+const char* const PlayerMoveImages[DirectionOfPlayerFace::DIRECTION_OF_PLAYER_FACE_SIZE][NUMBER_OF_PLAYER_MOVE_IMAGE_FOR_EACH_DIR] =
 {
-    {"img/players/isometric_Mini-Crusader/run/crusader_run_00000.png", 
+    {"img/players/isometric_Mini-Crusader/run/crusader_run_00000.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_00001.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_00002.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_00003.png",
@@ -176,7 +176,7 @@ const char* const PlayerMoveImages[DirectionOfPlayerFace::DIRECTION_OF_PLAYER_FA
     "img/players/isometric_Mini-Crusader/run/crusader_run_00014.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_00015.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_00016.png"},
-    {"img/players/isometric_Mini-Crusader/run/crusader_run_10000.png", 
+    {"img/players/isometric_Mini-Crusader/run/crusader_run_10000.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_10001.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_10002.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_10003.png",
@@ -193,7 +193,7 @@ const char* const PlayerMoveImages[DirectionOfPlayerFace::DIRECTION_OF_PLAYER_FA
     "img/players/isometric_Mini-Crusader/run/crusader_run_10014.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_10015.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_10016.png"},
-    {"img/players/isometric_Mini-Crusader/run/crusader_run_20000.png", 
+    {"img/players/isometric_Mini-Crusader/run/crusader_run_20000.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_20001.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_20002.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_20003.png",
@@ -210,7 +210,7 @@ const char* const PlayerMoveImages[DirectionOfPlayerFace::DIRECTION_OF_PLAYER_FA
     "img/players/isometric_Mini-Crusader/run/crusader_run_20014.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_20015.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_20016.png"},
-    {"img/players/isometric_Mini-Crusader/run/crusader_run_30000.png", 
+    {"img/players/isometric_Mini-Crusader/run/crusader_run_30000.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_30001.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_30002.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_30003.png",
@@ -227,7 +227,7 @@ const char* const PlayerMoveImages[DirectionOfPlayerFace::DIRECTION_OF_PLAYER_FA
     "img/players/isometric_Mini-Crusader/run/crusader_run_30014.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_30015.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_30016.png"},
-    {"img/players/isometric_Mini-Crusader/run/crusader_run_40000.png", 
+    {"img/players/isometric_Mini-Crusader/run/crusader_run_40000.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_40001.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_40002.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_40003.png",
@@ -244,7 +244,7 @@ const char* const PlayerMoveImages[DirectionOfPlayerFace::DIRECTION_OF_PLAYER_FA
     "img/players/isometric_Mini-Crusader/run/crusader_run_40014.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_40015.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_40016.png"},
-    {"img/players/isometric_Mini-Crusader/run/crusader_run_50000.png", 
+    {"img/players/isometric_Mini-Crusader/run/crusader_run_50000.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_50001.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_50002.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_50003.png",
@@ -261,7 +261,7 @@ const char* const PlayerMoveImages[DirectionOfPlayerFace::DIRECTION_OF_PLAYER_FA
     "img/players/isometric_Mini-Crusader/run/crusader_run_50014.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_50015.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_50016.png"},
-    {"img/players/isometric_Mini-Crusader/run/crusader_run_60000.png", 
+    {"img/players/isometric_Mini-Crusader/run/crusader_run_60000.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_60001.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_60002.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_60003.png",
@@ -278,7 +278,7 @@ const char* const PlayerMoveImages[DirectionOfPlayerFace::DIRECTION_OF_PLAYER_FA
     "img/players/isometric_Mini-Crusader/run/crusader_run_60014.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_60015.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_60016.png"},
-    {"img/players/isometric_Mini-Crusader/run/crusader_run_70000.png", 
+    {"img/players/isometric_Mini-Crusader/run/crusader_run_70000.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_70001.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_70002.png",
     "img/players/isometric_Mini-Crusader/run/crusader_run_70003.png",
@@ -473,8 +473,7 @@ void heart_function() {
 
     }
 }
-
-//맵 바뀌는 함수에 넣어서 맵 바뀔 때 숨겨진 하트 다시 보이게하고 heart구조체의 멤버 num_heart 5로 초기화
+//
 void ShowHeart() {
     for (int i = 0; i < 5; i++) {
         heart.scene = gameScene[level];
@@ -483,14 +482,14 @@ void ShowHeart() {
     }
 }
 
-//넉백(피격 시 호출되는 함수 내에서 호출)
+// knockback
 void MinusHeart() {
     for (int i = 0; i < 5; i++) {
         if (heart.num_heart == i)
             hideObject(heart.heart[i]);
     }
     if (heart.num_heart == 0)
-        showMessage("게임 끝");
+        showMessage("GAME OVER");
     heart.num_heart--;
 }
 
@@ -516,7 +515,7 @@ void InitPlayer() {
 
 bool IsOutOfMap()
 {
-    Coord player_loc = {PLAYER_BASIC_X, PLAYER_BASIC_Y };
+    Coord player_loc = { PLAYER_BASIC_X, PLAYER_BASIC_Y };
 
     for (int y = 0; y <= BASE_Y; ++y)
     {
@@ -532,11 +531,11 @@ bool IsOutOfMap()
             points[3] = TransformCoord({ x, y }, { CHUNK_SIZE - 1, 0 }, d_coord);
 
             points[0].x += TILE_WIDTH_OFFSET_FROM_LEFT;
-            points[0].y += TILE_SIZE*1.5;
+            points[0].y += TILE_SIZE * 1.5;
             points[1].x += TILE_WIDTH_OFFSET_FROM_LEFT + 21 * SCALE / 2;
             points[1].y += TILE_SIZE;
             points[2].x += TILE_SIZE;
-            points[2].y += TILE_SIZE*1.5;
+            points[2].y += TILE_SIZE * 1.5;
             points[3].x += TILE_SIZE;
             points[3].y += TILE_SIZE * 1.5;
 
@@ -657,6 +656,15 @@ void RefreshPlayer()
         setObjectImage(player.obj, PlayerMoveImages[player.direction][player.image_frame]);
         break;
     case PlayerState::ATTACK:
+        if (player.image_frame == NUMBER_OF_PLAYER_ATTACK_IMAGE_FOR_EACH_DIR - 5) {
+            for (int i = 0; i < MAX_NUMBER_OF_BULLET; i++) {
+                if (turrets[level][i].obj == 0)
+                    break;
+                if (isnearPlayer(player.x, player.y, PlayerRange, i)) {
+                    isTurretHitted(i);
+                }
+            }
+        }
         if (player.image_frame >= NUMBER_OF_PLAYER_ATTACK_IMAGE_FOR_EACH_DIR)
         {
             player.image_frame = 0;

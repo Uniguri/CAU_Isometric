@@ -36,3 +36,7 @@
 
 #define MAX_NUMBER_OF_BULLET 100
 #define MAX_NUMBER_OF_TURRET 2 * BASE_X * BASE_Y
+
+#define PI 3.14159
+#define TurretRange 500
+#define PlayerRange 500
