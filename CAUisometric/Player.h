@@ -55,7 +55,4 @@ bool IsOutOfMap();
 void ResetPlayer();
 
 void MoveLevelAnimation();
-
-void PlayerAttack();
-void PlayerHitted();
-bool IsDead();
+int IsPlayerHitted();

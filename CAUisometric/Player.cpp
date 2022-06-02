@@ -1,6 +1,7 @@
 #include "player.h"
 #include "platform.h"
 #include "turret.h"
+
 extern ObjectID map[MAX_LEVEL][MAX_HEIGHT][MAX_WIDTH];
 extern int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1], level;
 extern Player player;
@@ -475,7 +476,7 @@ void heart_function() {
 }
 //
 void ShowHeart() {
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < heart.num_heart; i++) {
         heart.scene = gameScene[level];
         locateObject(heart.heart[i], heart.scene, heart.heart_x[i], heart.heart_y);
         showObject(heart.heart[i]);
@@ -489,7 +490,7 @@ void MinusHeart() {
             hideObject(heart.heart[i]);
     }
     if (heart.num_heart == 0)
-        showMessage("GAME OVER");
+        printf("Player is dead. The location of function is MinuxHeart.");
     heart.num_heart--;
 }
 
@@ -568,9 +569,26 @@ void ResetPlayer() {
     showObject(player.obj);
 }
 
-void PlayerHitted()
+int IsPlayerHitted()
 {
+    for (int i = 0; i < MAX_NUMBER_OF_BULLET; ++i)
+    {
+        if (bullets[i].is_deleted)
+            continue;
+        
+        Coord box[] = { 
+            {PLAYER_X+120*PLAYER_SCALE, PLAYER_Y+67 * PLAYER_SCALE},
+            {PLAYER_X+168*PLAYER_SCALE, PLAYER_Y+67 * PLAYER_SCALE},
+            {PLAYER_X+161*PLAYER_SCALE, PLAYER_Y+201 * PLAYER_SCALE},
+            {PLAYER_X+134*PLAYER_SCALE, PLAYER_Y+201 * PLAYER_SCALE}
+        };
 
+        int x = bullets[i].x;
+        int y = bullets[i].y;
+        if (IsCollision({ x + 1,y + 8 }, 4, box))
+            return i;
+    }
+    return -1;
 }
 
 void PlayerKeyboardCallback(KeyCode code, KeyState state) {
@@ -705,6 +723,30 @@ void PlayerTimerCallback(TimerID timer) {
             setTimer(player_timer, 0.01f);
             startTimer(player_timer);
         }
+
+        if (int index_of_bullet = IsPlayerHitted() != -1)
+        {
+            MinusHeart();
+            int dx = PLAYER_BASIC_X - bullets[index_of_bullet].x;
+            int dy = PLAYER_BASIC_Y - bullets[index_of_bullet].y;
+            double len = sqrt(pow(dx, 2) + pow(dy, 2));
+            Vec2d direction_vec = bullets[index_of_bullet].direction_vec;
+
+            float sign_of_f = (direction_vec.x >= 0) ? 1 : -1;
+            double move_x = sign_of_f * pow(direction_vec.x, 2) * PLAYER_KNOCKBACK_RATE;
+            player.x += move_x;
+            sign_of_f = (direction_vec.y >= 0) ? 1 : -1;
+            double move_y = sign_of_f * pow(direction_vec.y, 2) * PLAYER_KNOCKBACK_RATE;
+            player.y += move_y;
+
+            DeleteBullet(index_of_bullet);
+
+            for (int i = 0; i < MAX_NUMBER_OF_BULLET; ++i)
+            {
+                if(!bullets[i].is_deleted)
+                    MoveBullet(-move_x, -move_y, i);
+            }
+        }
     }
     if (timer == moveAnimationTimer) {
         cnt++;
@@ -723,7 +765,6 @@ void PlayerTimerCallback(TimerID timer) {
             cnt = 0;
             isMovingLevel = false;
             ResetPlayer();
-            printf("%d\n", level);
             setTimer(player_timer, 0.01f);
             startTimer(player_timer);
             enterScene(gameScene[level]);

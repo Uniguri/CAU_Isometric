@@ -64,9 +64,6 @@ void SetBullet(const int x, const int y, const int speed, const Vec2d direction_
 
 void MoveBullet(const int additional_dx, const int additional_dy, int i)
 {
-	if (bullets[i].is_deleted)
-		return;
-
 	Vec2d dir_vec = bullets[i].direction_vec;
 
 	float sign_of_f = (dir_vec.x >= 0) ? 1 : -1;
@@ -84,6 +81,9 @@ void MoveBullet(const int additional_dx, const int additional_dy, int i)
 
 void RefreshBullet(const int additional_dx, const int additional_dy, int i)
 {
+	if (bullets[i].is_deleted)
+		return;
+
 	MoveBullet(additional_dx, additional_dy, i);
 	locateObject(bullets[i].obj, bullets[i].scene, bullets[i].x, bullets[i].y);
 }
