@@ -27,6 +27,6 @@ void InitBullet(int i);
 void InitBulletSystem(void);
 void DeleteBullet(int i);
 void SetBullet(const int x, const int y, const int speed, const Vec2d direction_vec, int i);
-void ChangeBulletType(BulletType type);
+void ChangeBulletType(BulletType type, int i);
 void MoveBullet(const int additional_dx, const int additional_dy, int i);
 void RefreshBullet(const int additional_dx, const int additional_dy, int i);

@@ -2,8 +2,10 @@
 #include <bangtal.h>
 #include <stdio.h>
 #include "constant_value.h"
+#include "main.h"
 #include "bullet.h"
 #include "turret.h"
+
 
 #define NUMBER_OF_PLAYER_IDLE_IMAGE_FOR_EACH_DIR 16
 #define NUMBER_OF_PLAYER_MOVE_IMAGE_FOR_EACH_DIR 17

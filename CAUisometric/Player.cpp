@@ -6,6 +6,7 @@ extern ObjectID map[MAX_LEVEL][MAX_HEIGHT][MAX_WIDTH];
 extern int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1], level;
 extern Player player;
 extern SceneID gameScene[MAX_LEVEL];
+extern SceneID gameover_scene;
 extern Bullet bullets[100];
 extern Turret turrets[MAX_LEVEL][MAX_NUMBER_OF_TURRET];
 extern heart_struct heart;
@@ -490,7 +491,11 @@ void MinusHeart() {
             hideObject(heart.heart[i]);
     }
     if (heart.num_heart == 0)
-        printf("Player is dead. The location of function is MinuxHeart.");
+    {
+        printf("Player is dead. The location of function is MinuxHeart.\n\n");
+        enterScene(gameover_scene);
+        setMouseCallback(GameOverSceneMCB);
+    }
     heart.num_heart--;
 }
 

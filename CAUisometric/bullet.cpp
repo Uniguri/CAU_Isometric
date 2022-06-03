@@ -7,7 +7,7 @@ extern Bullet bullets[MAX_NUMBER_OF_BULLET];
 
 TimerID bullet_timer;
 
-const char* BULLET_IMAGE[] = {
+const char* BULLET_IMAGES[] = {
 	"img/bullets/All_Fire_Bullet_Pixel/mint_bullet.png",
 	"img/bullets/All_Fire_Bullet_Pixel/ice_bullet.png",
 	"img/bullets/All_Fire_Bullet_Pixel/gray_bullet.png",
@@ -29,7 +29,7 @@ void BulletTimerCallback(TimerID timer, const int dx, const int dy)
 
 void InitBullet(int i)
 {
-	bullets[i].obj = createObject(BULLET_IMAGE[0]);
+	bullets[i].obj = createObject(BULLET_IMAGES[0]);
 	bullets[i].scene = gameScene[level];
 	DeleteBullet(i);
 }
@@ -60,6 +60,11 @@ void SetBullet(const int x, const int y, const int speed, const Vec2d direction_
 	scaleObject(bullets[i].obj, SCALE / 2);
 	locateObject(bullets[i].obj, gameScene[level], x, y);
 	showObject(bullets[i].obj);
+}
+
+void ChangeBulletType(BulletType type, int i)
+{
+	setObjectImage(bullets[i].obj, BULLET_IMAGES[type]);
 }
 
 void MoveBullet(const int additional_dx, const int additional_dy, int i)
