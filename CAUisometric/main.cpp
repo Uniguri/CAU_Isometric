@@ -115,10 +115,16 @@ void ResetGame(void)
 void timerCallback(TimerID timer) {
 	PlayerTimerCallback(timer);
 
-	if (player.state == PlayerState::ATTACK)
+	if (player.state == PlayerState::ATTACK || player.state == PlayerState::BLOCK)
 		BulletTimerCallback(timer, 0, 0);
 	else
 		BulletTimerCallback(timer, -player.dx, -player.dy);
+	
+	if (player.is_dead)
+	{
+		enterScene(gameover_scene);
+		setMouseCallback(GameOverSceneMCB);
+	}
 }
 
 void keyboardCallback(KeyCode code, KeyState state) {

@@ -81,6 +81,5 @@ bool isnearPlayer(const int dx, const int dy, int range, int i) {
 void isTurretHitted(int i) {
     turrets[level][i].active = false;
     hideObject(turrets[level][i].obj);
-    printf("aya\n");
     return;
 }

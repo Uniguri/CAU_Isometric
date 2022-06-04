@@ -461,6 +461,154 @@ const char* const PlayerAttackImages[DirectionOfPlayerFace::DIRECTION_OF_PLAYER_
         "img/players/isometric_Mini-Crusader/attack/crusader_attack_70017.png"
     }
 };
+const char* const PlayerBlockImages[DirectionOfPlayerFace::DIRECTION_OF_PLAYER_FACE_SIZE][NUMBER_OF_PLAYER_BLOCK_IMAGE_FOR_EACH_DIR] =
+{
+    {
+        "img/players/isometric_Mini-Crusader/block/crusader_block_00000.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_00001.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_00002.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_00003.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_00004.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_00005.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_00006.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_00007.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_00008.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_00009.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_00010.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_00011.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_00012.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_00013.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_00014.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_00015.png"
+    },
+    {
+        "img/players/isometric_Mini-Crusader/block/crusader_block_10000.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_10001.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_10002.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_10003.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_10004.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_10005.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_10006.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_10007.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_10008.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_10009.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_10010.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_10011.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_10012.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_10013.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_10014.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_10015.png"
+    },
+    {
+        "img/players/isometric_Mini-Crusader/block/crusader_block_20000.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_20001.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_20002.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_20003.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_20004.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_20005.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_20006.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_20007.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_20008.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_20009.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_20010.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_20011.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_20012.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_20013.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_20014.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_20015.png"
+    },
+    {
+        "img/players/isometric_Mini-Crusader/block/crusader_block_30000.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_30001.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_30002.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_30003.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_30004.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_30005.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_30006.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_30007.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_30008.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_30009.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_30010.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_30011.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_30012.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_30013.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_30014.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_30015.png"
+    },
+    {
+        "img/players/isometric_Mini-Crusader/block/crusader_block_40000.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_40001.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_40002.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_40003.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_40004.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_40005.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_40006.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_40007.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_40008.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_40009.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_40010.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_40011.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_40012.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_40013.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_40014.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_40015.png"
+    },
+    {
+        "img/players/isometric_Mini-Crusader/block/crusader_block_50000.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_50001.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_50002.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_50003.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_50004.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_50005.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_50006.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_50007.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_50008.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_50009.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_50010.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_50011.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_50012.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_50013.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_50014.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_50015.png"
+    },
+    {
+        "img/players/isometric_Mini-Crusader/block/crusader_block_60000.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_60001.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_60002.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_60003.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_60004.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_60005.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_60006.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_60007.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_60008.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_60009.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_60010.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_60011.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_60012.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_60013.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_60014.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_60015.png"
+    },
+    {
+        "img/players/isometric_Mini-Crusader/block/crusader_block_70000.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_70001.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_70002.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_70003.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_70004.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_70005.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_70006.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_70007.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_70008.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_70009.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_70010.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_70011.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_70012.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_70013.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_70014.png",
+        "img/players/isometric_Mini-Crusader/block/crusader_block_70015.png"
+    }
+};
+
 TimerID player_timer, moveAnimationTimer;
 ObjectID animation1 = createObject("img/moveanimation.png"), animation2 = createObject("img/moveanimation.png");
 SceneID moveScene = createScene("", "img/mainScene.png");
@@ -493,8 +641,7 @@ void MinusHeart() {
     if (heart.num_heart == 0)
     {
         printf("Player is dead. The location of function is MinuxHeart.\n\n");
-        enterScene(gameover_scene);
-        setMouseCallback(GameOverSceneMCB);
+        player.is_dead = true;
     }
     heart.num_heart--;
 }
@@ -509,6 +656,8 @@ void InitPlayer() {
     player.speed = PLAYER_BASIC_SPEED;
     player.x = 0;
     player.y = 0;
+    player.is_blocking = false;
+    player.is_dead = false;
     locateObject(player.obj, gameScene[level], PLAYER_X, PLAYER_Y);
     scaleObject(player.obj, PLAYER_SCALE);
     showObject(player.obj);
@@ -569,9 +718,74 @@ void ResetPlayer() {
     player.speed = PLAYER_BASIC_SPEED;
     player.x = 0;
     player.y = 0;
+    player.is_blocking = false;
+    player.is_dead = false;
     locateObject(player.obj, gameScene[level], PLAYER_X, PLAYER_Y);
     scaleObject(player.obj, PLAYER_SCALE);
     showObject(player.obj);
+}
+
+int DoPlayerBlock()
+{
+    for (int i = 0; i < MAX_NUMBER_OF_BULLET; ++i)
+    {
+        if (bullets[i].is_deleted)
+            continue;
+
+        Coord player_hit_box[] = {
+            {PLAYER_X + 120 * PLAYER_SCALE, PLAYER_Y + 67 * PLAYER_SCALE},
+            {PLAYER_X + 168 * PLAYER_SCALE, PLAYER_Y + 67 * PLAYER_SCALE},
+            {PLAYER_X + 161 * PLAYER_SCALE, PLAYER_Y + 201 * PLAYER_SCALE},
+            {PLAYER_X + 134 * PLAYER_SCALE, PLAYER_Y + 201 * PLAYER_SCALE}
+        };
+
+        int x = bullets[i].x, y = bullets[i].y;
+        int rx = x - PLAYER_BASIC_X, ry = y - PLAYER_BASIC_Y;
+
+        switch (player.direction)
+        {
+        case DirectionOfPlayerFace::DOWN:
+            if (ry > 0)
+                continue;
+            break;
+        case DirectionOfPlayerFace::DOWN_RIGHT:
+            if (ry > 0 || rx < 0)
+                continue;
+            break;
+        case DirectionOfPlayerFace::RIGHT:
+            if (rx < 0)
+                continue;
+            break;
+        case DirectionOfPlayerFace::RIGHT_UP:
+            if (ry < 0 || rx < 0)
+                continue;
+            break;
+        case DirectionOfPlayerFace::UP:
+            if (ry < 0)
+                continue;
+            break;
+        case DirectionOfPlayerFace::UP_LEFT:
+            if (ry < 0 || rx > 0)
+                continue;
+            break;
+        case DirectionOfPlayerFace::LEFT:
+            if (rx > 0)
+                continue;
+            break;
+        case DirectionOfPlayerFace::LEFT_DOWN:
+            if (ry > 0 || rx > 0)
+                continue;
+            break;
+        }
+
+        
+        if (IsCollision({ x + 1,y + 8 }, 4, player_hit_box) ||
+            IsCollision({ x + 14,y + 8 }, 4, player_hit_box) ||
+            IsCollision({ x + 7,y + 1 }, 4, player_hit_box) ||
+            IsCollision({ x + 7,y + 14 }, 4, player_hit_box))
+            return i;
+    }
+    return -1;
 }
 
 int IsPlayerHitted()
@@ -581,7 +795,7 @@ int IsPlayerHitted()
         if (bullets[i].is_deleted)
             continue;
         
-        Coord box[] = { 
+        Coord player_hit_box[] = { 
             {PLAYER_X+120*PLAYER_SCALE, PLAYER_Y+67 * PLAYER_SCALE},
             {PLAYER_X+168*PLAYER_SCALE, PLAYER_Y+67 * PLAYER_SCALE},
             {PLAYER_X+161*PLAYER_SCALE, PLAYER_Y+201 * PLAYER_SCALE},
@@ -590,10 +804,10 @@ int IsPlayerHitted()
 
         int x = bullets[i].x;
         int y = bullets[i].y;
-        if (IsCollision({ x + 1,y + 8 }, 4, box)  ||
-            IsCollision({ x + 14,y + 8 }, 4, box) || 
-            IsCollision({ x + 7,y + 1 }, 4, box)  || 
-            IsCollision({ x + 7,y + 14 }, 4, box))
+        if (IsCollision({ x + 1,y + 8 }, 4, player_hit_box)  ||
+            IsCollision({ x + 14,y + 8 }, 4, player_hit_box) || 
+            IsCollision({ x + 7,y + 1 }, 4, player_hit_box)  || 
+            IsCollision({ x + 7,y + 14 }, 4, player_hit_box))
             return i;
     }
     return -1;
@@ -624,14 +838,32 @@ void PlayerKeyboardCallback(KeyCode code, KeyState state) {
         else
             player.dx += player.speed;
     }
-    else if (code == KeyCode::KEY_SPACE)
+    else if (code == KeyCode::KEY_A)
     {
+        if (player.state == PlayerState::BLOCK)
+            return;
+
         if (state == KeyState::KEY_PRESSED)
         {
             player.state = PlayerState::ATTACK;
             player.image_frame = 0;
         }
-        return;
+    }
+    else if (code == KeyCode::KEY_S)
+    {
+        if (player.state == PlayerState::ATTACK)
+            return;
+
+        if (state == KeyState::KEY_PRESSED)
+        {
+            player.state = PlayerState::BLOCK;
+            player.is_blocking = true;
+            player.image_frame = 0;
+        }
+        else
+        {
+            player.is_blocking = false;
+        }
     }
 
     int dx = player.dx, dy = player.dy;
@@ -652,7 +884,7 @@ void PlayerKeyboardCallback(KeyCode code, KeyState state) {
     else if (dx < 0 && dy == 0)
         player.direction = DirectionOfPlayerFace::LEFT;
 
-    if (player.state == PlayerState::ATTACK)
+    if (player.state == PlayerState::ATTACK || player.state == PlayerState::BLOCK)
         return;
 
     if (dx == 0 && dy == 0)
@@ -751,12 +983,34 @@ void RefreshPlayer()
         }
         setObjectImage(player.obj, PlayerAttackImages[player.direction][player.image_frame]);
         break;
+    case PlayerState::BLOCK:
+        if (player.image_frame >= NUMBER_OF_PLAYER_BLOCK_IMAGE_FOR_EACH_DIR)
+        {
+            player.image_frame = 0;
+            if (!player.dx && !player.dy)
+            {
+                player.state = PlayerState::IDLE;
+            }
+            else
+            {
+                player.state = PlayerState::WALK;
+            }
+            player.speed = PLAYER_BASIC_SPEED;
+        }
+
+        if (player.image_frame > 7 && player.is_blocking)
+        {
+            player.image_frame = 7;
+        }
+
+        setObjectImage(player.obj, PlayerBlockImages[player.direction][player.image_frame]);
+        break;
     }
 }
 
 void PlayerTimerCallback(TimerID timer) {
     if (timer == player_timer) {
-        if (player.state != PlayerState::ATTACK)
+        if (player.state != PlayerState::ATTACK && player.state != PlayerState::BLOCK)
         {
             player.x += player.dx;
             player.y += player.dy;
@@ -765,7 +1019,36 @@ void PlayerTimerCallback(TimerID timer) {
         MoveTurret(player.x, player.y);
         RefreshPlayer();
 
-        int index_of_bullet = IsPlayerHitted();
+        int index_of_bullet;
+        if(player.state == PlayerState::BLOCK && 5 <= player.image_frame && player.image_frame <= 12)
+        {
+            index_of_bullet = DoPlayerBlock();
+            if (index_of_bullet != -1)
+            {
+                int dx = PLAYER_BASIC_X - bullets[index_of_bullet].x;
+                int dy = PLAYER_BASIC_Y - bullets[index_of_bullet].y;
+                double len = sqrt(pow(dx, 2) + pow(dy, 2));
+                Vec2d direction_vec = bullets[index_of_bullet].direction_vec;
+
+                float sign_of_f = (direction_vec.x >= 0) ? 1 : -1;
+                double move_x = sign_of_f * pow(direction_vec.x, 2) * PLAYER_KNOCKBACK_RATE/5;
+                player.x += move_x;
+                sign_of_f = (direction_vec.y >= 0) ? 1 : -1;
+                double move_y = sign_of_f * pow(direction_vec.y, 2) * PLAYER_KNOCKBACK_RATE/5;
+                player.y += move_y;
+
+                DeleteBullet(index_of_bullet);
+
+                for (int i = 0; i < MAX_NUMBER_OF_BULLET; ++i)
+                {
+                    if (!bullets[i].is_deleted)
+                        MoveBullet(-move_x, -move_y, i);
+                }
+            }
+        }
+            
+
+        index_of_bullet = IsPlayerHitted();
         if (index_of_bullet != -1)
         {
             MinusHeart();

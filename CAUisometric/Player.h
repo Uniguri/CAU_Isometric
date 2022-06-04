@@ -11,10 +11,11 @@
 #define NUMBER_OF_PLAYER_IDLE_IMAGE_FOR_EACH_DIR 16
 #define NUMBER_OF_PLAYER_MOVE_IMAGE_FOR_EACH_DIR 17
 #define NUMBER_OF_PLAYER_ATTACK_IMAGE_FOR_EACH_DIR 18
+#define NUMBER_OF_PLAYER_BLOCK_IMAGE_FOR_EACH_DIR 16
 
 enum PlayerState
 {
-	IDLE, WALK, ATTACK, PLAYER_STATTE_SIZE
+	IDLE, WALK, ATTACK, BLOCK, PLAYER_STATTE_SIZE
 };
 
 enum DirectionOfPlayerFace
@@ -33,6 +34,7 @@ struct Player
 	int speed, dx, dy;
 	int x, y;
 	char health;
+	bool is_blocking;
 	bool is_dead;
 };
 
@@ -58,4 +60,5 @@ bool IsOutOfMap();
 void ResetPlayer();
 
 void MoveLevelAnimation();
+int DoPlayerBlock();
 int IsPlayerHitted();
