@@ -36,10 +36,11 @@
 #define TILE_HEIGHT_OFFSET_FROM_UP (1*SCALE/2)
 
 #define MAX_NUMBER_OF_BULLET 100
-#define MAX_NUMBER_OF_TURRET (2 * BASE_X * BASE_Y)
+#define MAX_NUMBER_OF_TURRET (3 * BASE_X * BASE_Y)
 
 #define PI 3.14159
 // unit is sec
 #define TURRET_FIRE_LATE (3)
 #define TurretRange 500
 #define PlayerRange 500
+#define DoorRange 10

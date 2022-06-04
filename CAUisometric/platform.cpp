@@ -3,6 +3,8 @@
 extern ObjectID map[MAX_LEVEL][MAX_HEIGHT][MAX_WIDTH];
 extern int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1], level;
 extern SceneID gameScene[MAX_LEVEL];
+extern Door door[MAX_LEVEL];
+extern Player player;
 
 
 const char* TileFileName[MAX_LEVEL] = {
@@ -70,4 +72,54 @@ int CreateRandomMap(int height, int width, int ck) {
 	}
 
 	return ck;
+}
+
+void MakeDoor() {
+	for (int m = 0; m < MAX_LEVEL; m++) {
+		Coord tmp;
+		while (1) {
+			tmp = { 1 + rand() % (BASE_X - 1), 1 + rand() % (BASE_Y - 1) };
+			if (base[m][tmp.y][tmp.x] == 1) break;
+		}
+		door[m].obj = createObject("img/door/portal_1.png");
+		door[m].scene = gameScene[m];
+		door[m].x = 1;
+		door[m].y = 1;
+		door[m].inner_x = CHUNK_SIZE / 2;
+		door[m].inner_y = CHUNK_SIZE / 2;
+
+		Coord loc = TransformCoord(door[m].x, door[m].x, door[m].inner_x, door[m].inner_y, 0, 0);
+		locateObject(door[m].obj, door[m].scene, loc.x, loc.y);
+		scaleObject(door[m].obj, SCALE);
+		showObject(door[m].obj);
+	}
+}
+
+void MoveDoor(const int dx, const int dy) {
+	Coord loc = TransformCoord(door[level].x, door[level].y, door[level].inner_x, door[level].inner_y, dx, dy);
+	//printf("%d %d %d %d\n", door[level].x, door[level].y, loc.x, loc.y);
+	locateObject(door[level].obj, door[level].scene, loc.x, loc.y);
+	if (isnearDoor(player.x, player.y, DoorRange)) {
+		if (door[level].active) {
+			door[level].active = false;
+			setObjectImage(door[level++].obj, "img/door/portal_1.png");
+			ResetPlayer();
+		}
+	}
+}
+
+bool isnearDoor(const int dx, const int dy, int range) {
+	Coord loc = TransformCoord(door[level].x, door[level].y, door[level].inner_x, door[level].inner_y, dx, dy);
+	int rx = loc.x - PLAYER_BASIC_X, ry = loc.y - PLAYER_BASIC_Y;
+	int r = int(sqrt(pow(rx, 2) + pow(ry, 2)));
+	if (r < range) {
+		return true;
+	}
+	return false;
+}
+
+void ActiveDoor() {
+	setObjectImage(door[level].obj, "img/door/portal_2.png");
+	door[level].active = true;
+	return;
 }

@@ -9,12 +9,15 @@ SceneID loading_scene;
 SceneID start_scene, gameover_scene;
 ObjectID loading_image;
 ObjectID start_button, end_button1, restart_button, menu_button,end_button2;
+Door door[MAX_LEVEL];
 
 TimerID loading_timer;
 
 Player player;
 Bullet bullets[MAX_NUMBER_OF_BULLET] = {0};
 Turret turrets[MAX_LEVEL][MAX_NUMBER_OF_TURRET] = {0};
+
+int turretCnt[MAX_LEVEL] = { 0 }, hiddenCnt=0;
 
 heart_struct heart;
 void LoadingTimerCallback(TimerID timer)
@@ -95,6 +98,8 @@ void MainGameSetting(void)
 	MakeMap();
 
 	heart_function();
+
+	MakeDoor();
 }
 
 void ResetGame(void) 
@@ -103,8 +108,10 @@ void ResetGame(void)
 	heart.num_heart = 5;
 
 	for (int l = 0; l < MAX_LEVEL; ++l)
-		for (int i = 0; i < MAX_NUMBER_OF_TURRET; ++i)
+		for (int i = 0; i < turretCnt[l]; ++i) {
 			turrets[l][i].active = true;
+			showObject(turrets[l][i].obj);
+		}
 
 	for (int i = 0; i < MAX_NUMBER_OF_BULLET; ++i)
 		DeleteBullet(i);

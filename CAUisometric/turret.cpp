@@ -7,6 +7,7 @@ extern SceneID gameScene[MAX_LEVEL];
 extern Bullet bullets[100];
 extern Turret turrets[MAX_LEVEL][MAX_NUMBER_OF_TURRET];
 extern Player player;
+extern int turretCnt[MAX_LEVEL], hiddenCnt;
 
 void InitTurret() {
     srand(time(NULL));
@@ -14,13 +15,15 @@ void InitTurret() {
         int idx = 0;
         for (int i = 1; i < BASE_Y; i++) {
             for (int j = 1; j < BASE_X; j++) {
-                if (base[m][i][j] == 1 && base[m][i - 1][j - 1] == 1) {
-                    srand(rand());
-                    int pickCnt = rand() % 100, cnt = 0;
-                    if (pickCnt < 40) cnt = 3;
-                    else if (40 <= pickCnt && pickCnt < 50) cnt = 2;
+                if (i == 1 && j == 1) continue;
+                if (base[m][i][j] == 1) {
+                    int pickCnt = rand() % 100, cnt = 1;
+                    if (pickCnt < 60) cnt = 3;
+                    else if (60 <= pickCnt && pickCnt < 80) cnt = 2;
+
+                    turretCnt[m] += cnt;
                     for (int k = 0; k < cnt; k++) {
-                        Coord tmp = { 1 + rand() % (CHUNK_SIZE - 1), 1 + rand() % (CHUNK_SIZE)-1 };
+                        Coord tmp = { 1 + rand() % (CHUNK_SIZE - 3), 1 + rand() % (CHUNK_SIZE - 3) };
                         turrets[m][idx].obj = createObject("img/turret.png");
                         turrets[m][idx].scene = gameScene[m];
                         turrets[m][idx].x = j;
@@ -44,8 +47,7 @@ void InitTurret() {
 
 void MoveTurret(const int dx, const int dy) {
     //640 360
-    for(int i = 0; i < MAX_NUMBER_OF_BULLET; i++){
-        if (turrets[level][i].obj == 0) break;
+    for (int i = 0; i < turretCnt[level]; i++) {
         Coord loc = TransformCoord(turrets[level][i].x, turrets[level][i].y, turrets[level][i].inner_x, turrets[level][i].inner_y, dx, dy);
         locateObject(turrets[level][i].obj, turrets[level][i].scene, loc.x, loc.y);
         if (turrets[level][i].active && isnearPlayer(player.x, player.y, TurretRange, i)) TurretFire(dx, dy, i);
@@ -81,5 +83,7 @@ bool isnearPlayer(const int dx, const int dy, int range, int i) {
 void isTurretHitted(int i) {
     turrets[level][i].active = false;
     hideObject(turrets[level][i].obj);
+    hiddenCnt++;
+    if (hiddenCnt == turretCnt[level])ActiveDoor();
     return;
 }

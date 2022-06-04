@@ -10,6 +10,7 @@ extern SceneID gameover_scene;
 extern Bullet bullets[100];
 extern Turret turrets[MAX_LEVEL][MAX_NUMBER_OF_TURRET];
 extern heart_struct heart;
+extern int turretCnt[MAX_LEVEL];
 
 const char* const PlayerIdleImages[DirectionOfPlayerFace::DIRECTION_OF_PLAYER_FACE_SIZE][NUMBER_OF_PLAYER_IDLE_IMAGE_FOR_EACH_DIR] =
 {
@@ -1017,10 +1018,11 @@ void PlayerTimerCallback(TimerID timer) {
         }
         MoveMap(player.x, player.y);
         MoveTurret(player.x, player.y);
+        MoveDoor(player.x, player.y);
         RefreshPlayer();
 
         int index_of_bullet;
-        if(player.state == PlayerState::BLOCK && 5 <= player.image_frame && player.image_frame <= 12)
+        if (player.state == PlayerState::BLOCK && 5 <= player.image_frame && player.image_frame <= 12)
         {
             index_of_bullet = DoPlayerBlock();
             if (index_of_bullet != -1)
@@ -1031,10 +1033,10 @@ void PlayerTimerCallback(TimerID timer) {
                 Vec2d direction_vec = bullets[index_of_bullet].direction_vec;
 
                 float sign_of_f = (direction_vec.x >= 0) ? 1 : -1;
-                double move_x = sign_of_f * pow(direction_vec.x, 2) * PLAYER_KNOCKBACK_RATE/5;
+                double move_x = sign_of_f * pow(direction_vec.x, 2) * PLAYER_KNOCKBACK_RATE / 5;
                 player.x += move_x;
                 sign_of_f = (direction_vec.y >= 0) ? 1 : -1;
-                double move_y = sign_of_f * pow(direction_vec.y, 2) * PLAYER_KNOCKBACK_RATE/5;
+                double move_y = sign_of_f * pow(direction_vec.y, 2) * PLAYER_KNOCKBACK_RATE / 5;
                 player.y += move_y;
 
                 DeleteBullet(index_of_bullet);
@@ -1046,7 +1048,7 @@ void PlayerTimerCallback(TimerID timer) {
                 }
             }
         }
-            
+
 
         index_of_bullet = IsPlayerHitted();
         if (index_of_bullet != -1)
@@ -1068,15 +1070,14 @@ void PlayerTimerCallback(TimerID timer) {
 
             for (int i = 0; i < MAX_NUMBER_OF_BULLET; ++i)
             {
-                if(!bullets[i].is_deleted)
+                if (!bullets[i].is_deleted)
                     MoveBullet(-move_x, -move_y, i);
             }
         }
         ShowHeart();
         if (IsOutOfMap() && !isMovingLevel) {
             printf("Out of map: %lld, %ld\n", time(NULL), clock());
-            level++;
-            level %= MAX_LEVEL;
+            if (level > 0) level--;
             isMovingLevel = true;
             MoveLevelAnimation();
         }
@@ -1103,6 +1104,10 @@ void PlayerTimerCallback(TimerID timer) {
             cnt = 0;
             isMovingLevel = false;
             ResetPlayer();
+            for (int i = 0; i < turretCnt[level]; ++i) {
+                turrets[level][i].active = true;
+                showObject(turrets[level][i].obj);
+            }
             setTimer(player_timer, 0.01f);
             startTimer(player_timer);
             enterScene(gameScene[level]);
