@@ -2,7 +2,7 @@
 
 extern ObjectID map[MAX_LEVEL][MAX_HEIGHT][MAX_WIDTH];
 extern int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1], level;
-extern SceneID gameScene[MAX_LEVEL];
+extern SceneID gameScene[MAX_LEVEL], gameover_scene;
 extern Door door[MAX_LEVEL];
 extern Player player;
 
@@ -97,15 +97,21 @@ void MakeDoor() {
 
 void MoveDoor(const int dx, const int dy) {
 	Coord loc = TransformCoord(door[level].x, door[level].y, door[level].inner_x, door[level].inner_y, dx, dy);
-	//printf("%d %d %d %d\n", door[level].x, door[level].y, loc.x, loc.y);
+	printf("%d %d %d %d\n", door[level].x, door[level].y, loc.x, loc.y);
 	locateObject(door[level].obj, door[level].scene, loc.x, loc.y);
 	if (isnearDoor(player.x, player.y, DoorRange)) {
 		if (door[level].active) {
-			door[level].active = false;
-			setObjectImage(door[level++].obj, "img/door/portal_1.png");
-			ResetPlayer();
+			if (level == MAX_LEVEL - 1) {
+				enterScene(gameover_scene);
+				setMouseCallback(GameOverSceneMCB);
+			}
+			else {
+				door[level].active = false;
+				setObjectImage(door[level++].obj, "img/door/portal_1.png");
+				ResetPlayer();
+			}
 		}
-	}
+	}	
 }
 
 bool isnearDoor(const int dx, const int dy, int range) {
