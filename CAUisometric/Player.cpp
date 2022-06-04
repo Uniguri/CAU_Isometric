@@ -685,9 +685,54 @@ void RefreshPlayer()
         if (player.image_frame == NUMBER_OF_PLAYER_ATTACK_IMAGE_FOR_EACH_DIR - 5) {
             for (int i = 0; i < MAX_NUMBER_OF_BULLET; i++) {
                 if (turrets[level][i].obj == 0)
-                    break;
+                    continue;
                 if (isnearPlayer(player.x, player.y, PlayerRange, i)) {
-                    isTurretHitted(i);
+                    Coord loc = TransformCoord(turrets[level][i].x, turrets[level][i].y, turrets[level][i].inner_x, turrets[level][i].inner_y, player.x, player.y);
+                    int rx = loc.x - PLAYER_BASIC_X, ry = loc.y - PLAYER_BASIC_Y;
+                    int r = sqrt(pow(rx, 2) + pow(ry, 2));
+                    switch (player.direction)
+                    {
+                    case DirectionOfPlayerFace::DOWN:
+                        if (-PlayerRange / 3 < rx && rx < PlayerRange / 3)
+                            if (ry < 0)
+                                isTurretHitted(i);
+                        break;
+                    case DirectionOfPlayerFace::DOWN_RIGHT:
+                        if (rx > 0)
+                            if (ry < 0)
+                                isTurretHitted(i);
+                        break;
+                    case DirectionOfPlayerFace::RIGHT:
+                        if (rx > 0)
+                            if (-PlayerRange/3 < ry && ry < PlayerRange/3)
+                                isTurretHitted(i);
+                        break;
+                    case DirectionOfPlayerFace::RIGHT_UP:
+                        if (rx > 0)
+                            if (ry > 0)
+                                isTurretHitted(i);
+                        break;
+                    case DirectionOfPlayerFace::UP:
+                        if (-PlayerRange / 3 < rx && rx < PlayerRange / 3)
+                            if (ry > 0)
+                                isTurretHitted(i);
+                        break;
+                    case DirectionOfPlayerFace::UP_LEFT:
+                        if (rx < 0)
+                            if (ry > 0)
+                                isTurretHitted(i);
+                        break;
+                    case DirectionOfPlayerFace::LEFT:
+                        if (rx < 0)
+                            if (-PlayerRange < ry && ry < PlayerRange)
+                                isTurretHitted(i);
+                        break;
+                    case DirectionOfPlayerFace::LEFT_DOWN:
+                        if (rx < 0)
+                            if (ry < 0)
+                                isTurretHitted(i);
+                        break;
+                    }
                 }
             }
         }

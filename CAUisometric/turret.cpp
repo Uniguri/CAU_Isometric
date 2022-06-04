@@ -9,11 +9,13 @@ extern Turret turrets[MAX_LEVEL][MAX_NUMBER_OF_TURRET];
 extern Player player;
 
 void InitTurret() {
+    srand(time(NULL));
     for (int m = 0; m < MAX_LEVEL; m++) {
         int idx = 0;
         for (int i = 1; i < BASE_Y; i++) {
             for (int j = 1; j < BASE_X; j++) {
                 if (base[m][i][j] == 1 && base[m][i - 1][j - 1] == 1) {
+                    srand(rand());
                     int pickCnt = rand() % 100, cnt = 0;
                     if (pickCnt < 40) cnt = 3;
                     else if (40 <= pickCnt && pickCnt < 50) cnt = 2;
