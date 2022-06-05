@@ -159,10 +159,14 @@
   <ItemGroup>
     <Text Include="img\bullets\All_Fire_Bullet_Pixel\source.txt" />
     <Text Include="img\players\isometric_Mini-Crusader\License.txt" />
+    <Text Include="img\tiles\License.txt" />
+    <Text Include="sounds\bgm\Source.txt" />
+    <Text Include="sounds\effect\Source.txt" />
     <Text Include="sounds\Source.txt" />
     <Text Include="설명서.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="img\blackScene.png" />
     <Image Include="img\bullets\All_Fire_Bullet_Pixel\gray_bullet.png" />
     <Image Include="img\bullets\All_Fire_Bullet_Pixel\ice_bullet.png" />
     <Image Include="img\bullets\All_Fire_Bullet_Pixel\mint_bullet.png" />
@@ -176,6 +180,7 @@
     <Image Include="img\buttons\restart.png" />
     <Image Include="img\buttons\resume.png" />
     <Image Include="img\buttons\start.png" />
+    <Image Include="img\clearScene.png" />
     <Image Include="img\door\portal_1.png" />
     <Image Include="img\door\portal_2.png" />
     <Image Include="img\heart.png" />
@@ -719,9 +724,30 @@
     <Image Include="img\players\isometric_Mini-Crusader\run\crusader_run_70014.png" />
     <Image Include="img\players\isometric_Mini-Crusader\run\crusader_run_70015.png" />
     <Image Include="img\players\isometric_Mini-Crusader\run\crusader_run_70016.png" />
+    <Image Include="img\tiles\assets_pixel_50x50\isometric_pixel_0000.png" />
+    <Image Include="img\tiles\assets_pixel_50x50\isometric_pixel_9994.png" />
+    <Image Include="img\tiles\assets_pixel_50x50\isometric_pixel_9995.png" />
+    <Image Include="img\tiles\assets_pixel_50x50\isometric_pixel_9996.png" />
+    <Image Include="img\tiles\assets_pixel_50x50\isometric_pixel_9997.png" />
+    <Image Include="img\tiles\assets_pixel_50x50\isometric_pixel_9998.png" />
+    <Image Include="img\tiles\assets_pixel_50x50\isometric_pixel_9999.png" />
     <Image Include="img\turret.png" />
   </ItemGroup>
   <ItemGroup>
+    <Media Include="sounds\bgm\GameClear.mp3" />
+    <Media Include="sounds\bgm\InGame1.mp3" />
+    <Media Include="sounds\bgm\InGame2.mp3" />
+    <Media Include="sounds\bgm\Over.mp3" />
+    <Media Include="sounds\bgm\Start.mp3" />
+    <Media Include="sounds\effect\Attack.mp3" />
+    <Media Include="sounds\effect\ButtonClick.mp3" />
+    <Media Include="sounds\effect\Damaged.mp3" />
+    <Media Include="sounds\effect\Fail.mp3" />
+    <Media Include="sounds\effect\Hit.mp3" />
+    <Media Include="sounds\effect\Shield.mp3" />
+    <Media Include="sounds\effect\ShootBullet.mp3" />
+    <Media Include="sounds\effect\Success.mp3" />
+    <Media Include="sounds\effect\Sword.mp3" />
     <Media Include="sounds\GameClear.mp3" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
