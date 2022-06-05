@@ -273,12 +273,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_14F827B667D248C4B4B3782127BC6565"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_14FDD0176004424D93E9CBEE7AE3F3E2"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -1180,12 +1174,6 @@
         "Entry"
         {
         "MsmKey" = "8:_55A42A1112E54B95AE8FFA30E78B58FD"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_55CF831E17234AD88BFD4F8E4BE01027"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -2361,12 +2349,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_A79D08181710449C92E90BB35F4BD883"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_A7C0C8FE484B4E1E9DF2C51626A184B5"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -2752,12 +2734,6 @@
         "Entry"
         {
         "MsmKey" = "8:_C066630AB9184EA382DB4A4582C64B94"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_C188D89DCDD14BC18DE349908FAC0B36"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -3669,12 +3645,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_FEF783E8983B47748D512E5F2C92B45C"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_FF01033E05DA4727B35D6EBDA52E35AA"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -3710,6 +3680,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
         "Release"
@@ -3734,6 +3712,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
     }
@@ -4602,26 +4588,6 @@
             "TargetName" = "8:crusader_block_30013.png"
             "Tag" = "8:"
             "Folder" = "8:_1682CDD63E2A4AED842D2ABCEFD1667D"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_14F827B667D248C4B4B3782127BC6565"
-            {
-            "SourcePath" = "8:..\\CAUisometric\\img\\buttons\\question.png"
-            "TargetName" = "8:question.png"
-            "Tag" = "8:"
-            "Folder" = "8:_1ABDA30B24EA4EB0AEE90C18F8FB501E"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -7642,26 +7608,6 @@
             "TargetName" = "8:crusader_run_70008.png"
             "Tag" = "8:"
             "Folder" = "8:_A1073110D64446508EF8A606A8C2FD5F"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_55CF831E17234AD88BFD4F8E4BE01027"
-            {
-            "SourcePath" = "8:..\\CAUisometric\\img\\buttons\\option.png"
-            "TargetName" = "8:option.png"
-            "Tag" = "8:"
-            "Folder" = "8:_1ABDA30B24EA4EB0AEE90C18F8FB501E"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -11556,26 +11502,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A79D08181710449C92E90BB35F4BD883"
-            {
-            "SourcePath" = "8:..\\CAUisometric\\img\\buttons\\resume.png"
-            "TargetName" = "8:resume.png"
-            "Tag" = "8:"
-            "Folder" = "8:_1ABDA30B24EA4EB0AEE90C18F8FB501E"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A7C0C8FE484B4E1E9DF2C51626A184B5"
             {
             "SourcePath" = "8:..\\CAUisometric\\img\\players\\isometric_Mini-Crusader\\idle\\crusader_idle_10007.png"
@@ -12862,26 +12788,6 @@
             "TargetName" = "8:crusader_block_50000.png"
             "Tag" = "8:"
             "Folder" = "8:_1682CDD63E2A4AED842D2ABCEFD1667D"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C188D89DCDD14BC18DE349908FAC0B36"
-            {
-            "SourcePath" = "8:..\\CAUisometric\\img\\buttons\\menu.png"
-            "TargetName" = "8:menu.png"
-            "Tag" = "8:"
-            "Folder" = "8:_1ABDA30B24EA4EB0AEE90C18F8FB501E"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -15902,26 +15808,6 @@
             "TargetName" = "8:crusader_attack_70013.png"
             "Tag" = "8:"
             "Folder" = "8:_F26A5C0B0E264163A02D41D910D1C209"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FEF783E8983B47748D512E5F2C92B45C"
-            {
-            "SourcePath" = "8:..\\CAUisometric\\img\\tiles\\assets_pixel_50x50\\isometric_pixel_0000.png"
-            "TargetName" = "8:isometric_pixel_0000.png"
-            "Tag" = "8:"
-            "Folder" = "8:_EC0E396930054DD29E23E9B53D1D40BB"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
