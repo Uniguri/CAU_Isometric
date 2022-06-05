@@ -2,10 +2,11 @@
 
 extern ObjectID map[MAX_LEVEL][MAX_HEIGHT][MAX_WIDTH];
 extern int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1], level;
-extern SceneID gameScene[MAX_LEVEL], gameover_scene;
+extern SceneID gameScene[MAX_LEVEL], gameover_scene, clear_scene;
+extern SoundID ingame_sound1, ingame_sound2, clear_sound;
 extern Door door[MAX_LEVEL];
 extern Player player;
-
+extern heart_struct heart;
 
 const char* TileFileName[MAX_LEVEL] = {
 	"img/tiles/assets_pixel_50x50/isometric_pixel_9995.png",
@@ -98,29 +99,50 @@ void MakeDoor() {
 void MoveDoor(const int dx, const int dy) {
 	Coord loc = TransformCoord(door[level].x, door[level].y, door[level].inner_x, door[level].inner_y, dx, dy);
 	locateObject(door[level].obj, door[level].scene, loc.x, loc.y);
-	if (isnearDoor(player.x, player.y, DoorRange)) {
+
+	const Coord player_hit_box[] = {
+			{PLAYER_X + 120 * PLAYER_SCALE, PLAYER_Y + 67 * PLAYER_SCALE},
+			{PLAYER_X + 168 * PLAYER_SCALE, PLAYER_Y + 67 * PLAYER_SCALE},
+			{PLAYER_X + 161 * PLAYER_SCALE, PLAYER_Y + 201 * PLAYER_SCALE},
+			{PLAYER_X + 134 * PLAYER_SCALE, PLAYER_Y + 201 * PLAYER_SCALE}
+	};
+
+	Coord door_box[] = {
+		{loc.x,loc.y},
+		{loc.x + 50 * SCALE, loc.y},
+		{loc.x + 50 * SCALE, loc.y + 50 * SCALE},
+		{loc.x, loc.y + 50 * SCALE}
+	};
+
+	if (IsCollision(player_hit_box[0], 4, door_box) ||
+		IsCollision(player_hit_box[1], 4, door_box) ||
+		IsCollision(player_hit_box[2], 4, door_box) ||
+		IsCollision(player_hit_box[3], 4, door_box)) 
+	{
 		if (door[level].active) {
 			if (level == MAX_LEVEL - 1) {
-				enterScene(gameover_scene);
-				setMouseCallback(GameOverSceneMCB);
+				enterScene(clear_scene);
+				stopSound(ingame_sound1);
+				stopSound(ingame_sound2);
+				setMouseCallback(ClearSceneMCB);
+				playSound(clear_sound);
 			}
 			else {
 				door[level].active = false;
 				setObjectImage(door[level++].obj, "img/door/portal_1.png");
+				enterScene(gameScene[level]);
+				heart.num_heart = PLAYER_MAX_HEART;
+
+				if (level == (MAX_LEVEL - 1) / 2)
+				{
+					stopSound(ingame_sound1);
+					playSound(ingame_sound2, true);
+				}
+
 				ResetPlayer();
 			}
 		}
 	}	
-}
-
-bool isnearDoor(const int dx, const int dy, int range) {
-	Coord loc = TransformCoord(door[level].x, door[level].y, door[level].inner_x, door[level].inner_y, dx, dy);
-	int rx = loc.x - PLAYER_BASIC_X, ry = loc.y - PLAYER_BASIC_Y;
-	int r = int(sqrt(pow(rx, 2) + pow(ry, 2)));
-	if (r < range) {
-		return true;
-	}
-	return false;
 }
 
 void ActiveDoor() {

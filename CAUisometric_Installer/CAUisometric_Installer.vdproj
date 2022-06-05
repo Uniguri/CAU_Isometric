@@ -21,6 +21,18 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_00651294B929473C9616DB65D3D49328"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_00AB8E3DB4E345D9913F8E950594824E"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_00C819346BE740CB87A58E94A52C4525"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -147,7 +159,19 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_09F4AF6E8FF342BBB5EFBD10F82F3475"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_0B37FDC9F2E74CD4976A765B5D53E166"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_0BC3A957C3BB4798B2E42DC26241CD73"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -184,6 +208,12 @@
         "Entry"
         {
         "MsmKey" = "8:_0E5204464B1B401EA6F80DCCFE449F3F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_0E530F0B5EF241549BE314C7A3DE1301"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -238,12 +268,6 @@
         "Entry"
         {
         "MsmKey" = "8:_139927E44D194D6CAC13E699C2AE2A55"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_1417D1CFBF26474F80909F652C6AB072"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -327,12 +351,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_1A5DBC640B074B28BA28AE85799DB81B"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_1ACAE0F52BAA4F44BB6B92EDE3AD95E4"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -358,12 +376,6 @@
         "Entry"
         {
         "MsmKey" = "8:_1BA0FB7EA68A439A99A8FE43DBC7E40D"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_1BC31D0AAB694914B11E886AABFED243"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -466,6 +478,12 @@
         "Entry"
         {
         "MsmKey" = "8:_212AB131F10E4F7D9DCC655D4BEC708A"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_2176640198CE49DCB5BDA30EFB409A7A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -651,12 +669,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_2C041C9892F5489F8D42471A28E28984"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_2D968DA77C3C4C63908B052DBC5B4781"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -700,12 +712,6 @@
         "Entry"
         {
         "MsmKey" = "8:_31EFE732BDC64BEDB9634B3FBF3E58C0"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_326F79F417E3487FB626E9A2D7CA8B5D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -843,6 +849,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_3AF3340402834D96A344A3357D4DD670"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_3AF4A1E5FC8A46B7AC9F4E75FABC71FF"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -897,6 +909,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_3E27B14BDC724129B8D0C39BAB4D397C"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_3F449B5BF8A04947925A799ABFA26F65"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -904,12 +922,6 @@
         "Entry"
         {
         "MsmKey" = "8:_4285A6BC2CE04869B0012C9AE66248B9"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_42B8312548254473A20B348479061406"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -999,6 +1011,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_48CE07D9269D4096AD606DED3263DB8D"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_498792D9E6F841809EAB35172B14B425"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -1078,6 +1096,12 @@
         "Entry"
         {
         "MsmKey" = "8:_4F2D15ED37E5425BA5D7B73264DD3167"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_4FE408BDDAAF4947939692D39CCE903A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1203,6 +1227,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_58E153B8E26544BC9BB040A81F982479"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_59611CF516534503862279E31ED3DF15"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -1215,6 +1245,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_59F88BC8B62348C898829F73AD2ADDF4"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_5AB748F07C714D579153E7664C9EA5BD"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -1222,6 +1258,12 @@
         "Entry"
         {
         "MsmKey" = "8:_5ACDD9D0452C4C21BFC237CEC41139D3"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_5B2664707AC84079995FFE728958616F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1444,6 +1486,12 @@
         "Entry"
         {
         "MsmKey" = "8:_6C91BAA1900E42A097F7C81079659A50"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_6CA54FA3DD1041779D370BEB2F7F127A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1677,6 +1725,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_7C41BC7C8DA54483A6FAB86407111931"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_7C82AD99B8974823BEA36F792FE979FF"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -1719,6 +1773,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_80AD651A06214B30947527CE7ADE1CC5"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_80E66A8491514AE7B48B02076FAA216C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -1738,6 +1798,12 @@
         "Entry"
         {
         "MsmKey" = "8:_81D0E554BF6E44E185E37A3ADC2585FB"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_820F6F601C6844CEB96831F5B46F6419"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1941,13 +2007,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_90787D0E53EB4BE6898483C9AB7A3300"
+        "MsmKey" = "8:_9074D0E35AF04334B32C81ADFC3D068A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_90D8A2D67EF146D3B22D3418FC59A3E5"
+        "MsmKey" = "8:_90787D0E53EB4BE6898483C9AB7A3300"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1977,6 +2043,18 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_91973E34126E401F9BB4D48C05A03965"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_91B9CF3AFE3A4720B8309B67BAC1A79E"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_922FE9A1E0964FBBB9119054EC5E1AC4"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -1990,6 +2068,12 @@
         "Entry"
         {
         "MsmKey" = "8:_92B34E72B067424584208016A691F137"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_93982EC105CD412C8E2B80B7CF9BA292"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -2217,6 +2301,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_A3896280881F45BAB7E4F968219774D2"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_A3BADC5EE0CD4C5299DA52C4B96312FD"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -2428,6 +2518,12 @@
         "Entry"
         {
         "MsmKey" = "8:_B179470F7DA94409B754E9DB1D8A8401"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_B18FD5C5E0374DFA90FD96DC2673A024"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -2661,12 +2757,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_C10AD9A9F8C54B4A992D4E68C206FE33"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_C188D89DCDD14BC18DE349908FAC0B36"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -2734,6 +2824,12 @@
         "Entry"
         {
         "MsmKey" = "8:_C5755DCA6DA14CA0A1EEBF7C072A6591"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C66DD42545264E8DBBF721E8A7369107"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -2841,12 +2937,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_D055E427F02F4591BF5A2177F7EA4FCC"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_D09418243F1349158A9CEBAC49862E91"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -2866,6 +2956,12 @@
         "Entry"
         {
         "MsmKey" = "8:_D123D1BB3CD54EE59FCB2E8979E39A58"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_D260BDD15F3441DEB9B2B380CC2776D3"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -2967,19 +3063,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_D78F35D9461943BA95F805046E3F39F2"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_D7B302722E2E42F587B92F440A066699"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_D7C4AC69FCED4B959629B84CAD0E2569"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -3051,6 +3135,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_DA23070DDB7B42FA94D0BD80B6D4F692"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_DAD087EC50FA400FA562C094B18D3CDE"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -3058,6 +3148,12 @@
         "Entry"
         {
         "MsmKey" = "8:_DAE102932EAE41F0AEF99AF7B789274B"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_DAF771242493494BB82CACFF16EE2F03"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -3075,12 +3171,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_DD0B1DD1B3AB44C599A85A74800F506C"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_DD9733609E1C49828B5BAA26A6B536FD"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -3088,12 +3178,6 @@
         "Entry"
         {
         "MsmKey" = "8:_DE133EA49BA64871A68141B71A0A652B"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_DF2CDA2B3A704D2F8DB04F92B0A6F04F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -3196,6 +3280,12 @@
         "Entry"
         {
         "MsmKey" = "8:_E5F74DBDDD5A45909018DDEE669B323F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E611DA2DA9324E2BA487BBCE65616FA4"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -3411,6 +3501,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_F1E34038FCDD4ED18E0BD7B4E46DF85A"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_F414EC8511A944CEBC447BA62FB7495F"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -3453,6 +3549,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_F5973964B7BF462B837478B7C3F9AB8D"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_F5CE6436A1DD4F3EA273E41EBE485C67"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -3460,6 +3562,12 @@
         "Entry"
         {
         "MsmKey" = "8:_F62EB8E6273B41D79A9233AD381C63FD"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F64074A8B53F4DFE8AB2B804E8A30C8B"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -3478,6 +3586,12 @@
         "Entry"
         {
         "MsmKey" = "8:_F6C47CAAE86443249C17C0CE1161B602"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F8481D1E1BF745F1871489DFCF2C41F4"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -3520,6 +3634,12 @@
         "Entry"
         {
         "MsmKey" = "8:_FAD01947910D41CA9F9EC555D54E266D"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FB170C6692374B84B8DA87A995172F25"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -3583,6 +3703,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -3599,6 +3727,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -3626,6 +3762,46 @@
             "TargetName" = "8:start.png"
             "Tag" = "8:"
             "Folder" = "8:_1ABDA30B24EA4EB0AEE90C18F8FB501E"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_00651294B929473C9616DB65D3D49328"
+            {
+            "SourcePath" = "8:..\\CAUisometric\\sounds\\effect\\Success.mp3"
+            "TargetName" = "8:Success.mp3"
+            "Tag" = "8:"
+            "Folder" = "8:_95D922152B764FDFB8FE628D1E16EF48"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_00AB8E3DB4E345D9913F8E950594824E"
+            {
+            "SourcePath" = "8:..\\CAUisometric\\sounds\\effect\\Source.txt"
+            "TargetName" = "8:Source.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_95D922152B764FDFB8FE628D1E16EF48"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -4060,12 +4236,52 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_09F4AF6E8FF342BBB5EFBD10F82F3475"
+            {
+            "SourcePath" = "8:..\\CAUisometric\\sounds\\effect\\Sword.mp3"
+            "TargetName" = "8:Sword.mp3"
+            "Tag" = "8:"
+            "Folder" = "8:_95D922152B764FDFB8FE628D1E16EF48"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0B37FDC9F2E74CD4976A765B5D53E166"
             {
             "SourcePath" = "8:..\\CAUisometric\\img\\players\\isometric_Mini-Crusader\\attack\\crusader_attack_70001.png"
             "TargetName" = "8:crusader_attack_70001.png"
             "Tag" = "8:"
             "Folder" = "8:_F26A5C0B0E264163A02D41D910D1C209"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0BC3A957C3BB4798B2E42DC26241CD73"
+            {
+            "SourcePath" = "8:..\\CAUisometric\\img\\mainScene.png"
+            "TargetName" = "8:mainScene.png"
+            "Tag" = "8:"
+            "Folder" = "8:_B8107E7554C04D6182B658F9A6010D44"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -4186,6 +4402,26 @@
             "TargetName" = "8:crusader_block_70009.png"
             "Tag" = "8:"
             "Folder" = "8:_1682CDD63E2A4AED842D2ABCEFD1667D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0E530F0B5EF241549BE314C7A3DE1301"
+            {
+            "SourcePath" = "8:..\\CAUisometric\\sounds\\effect\\Damaged.mp3"
+            "TargetName" = "8:Damaged.mp3"
+            "Tag" = "8:"
+            "Folder" = "8:_95D922152B764FDFB8FE628D1E16EF48"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -4366,26 +4602,6 @@
             "TargetName" = "8:crusader_block_30013.png"
             "Tag" = "8:"
             "Folder" = "8:_1682CDD63E2A4AED842D2ABCEFD1667D"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1417D1CFBF26474F80909F652C6AB072"
-            {
-            "SourcePath" = "8:..\\CAUisometric\\img\\player.png"
-            "TargetName" = "8:player.png"
-            "Tag" = "8:"
-            "Folder" = "8:_B8107E7554C04D6182B658F9A6010D44"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -4660,26 +4876,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1A5DBC640B074B28BA28AE85799DB81B"
-            {
-            "SourcePath" = "8:..\\CAUisometric\\img\\loading.png"
-            "TargetName" = "8:loading.png"
-            "Tag" = "8:"
-            "Folder" = "8:_B8107E7554C04D6182B658F9A6010D44"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1ACAE0F52BAA4F44BB6B92EDE3AD95E4"
             {
             "SourcePath" = "8:..\\CAUisometric\\img\\players\\isometric_Mini-Crusader\\attack\\crusader_attack_60009.png"
@@ -4766,26 +4962,6 @@
             "TargetName" = "8:crusader_attack_00004.png"
             "Tag" = "8:"
             "Folder" = "8:_F26A5C0B0E264163A02D41D910D1C209"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_1BC31D0AAB694914B11E886AABFED243"
-            {
-            "SourcePath" = "8:..\\CAUisometric\\img\\bullets\\All_Fire_Bullet_Pixel\\source.txt"
-            "TargetName" = "8:source.txt"
-            "Tag" = "8:"
-            "Folder" = "8:_D30D3F1A8FC4407A844BF37E1B4412BD"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -5126,6 +5302,26 @@
             "TargetName" = "8:crusader_block_00000.png"
             "Tag" = "8:"
             "Folder" = "8:_1682CDD63E2A4AED842D2ABCEFD1667D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2176640198CE49DCB5BDA30EFB409A7A"
+            {
+            "SourcePath" = "8:..\\CAUisometric\\sounds\\bgm\\Start.mp3"
+            "TargetName" = "8:Start.mp3"
+            "Tag" = "8:"
+            "Folder" = "8:_14E64E847DB74D5BAE0355D1C631916C"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -5740,26 +5936,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2C041C9892F5489F8D42471A28E28984"
-            {
-            "SourcePath" = "8:..\\CAUisometric\\img\\bullets\\All_Fire_Bullet_Pixel\\mint_bullet.png"
-            "TargetName" = "8:mint_bullet.png"
-            "Tag" = "8:"
-            "Folder" = "8:_D30D3F1A8FC4407A844BF37E1B4412BD"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2D968DA77C3C4C63908B052DBC5B4781"
             {
             "SourcePath" = "8:..\\CAUisometric\\img\\players\\isometric_Mini-Crusader\\run\\crusader_run_50004.png"
@@ -5906,26 +6082,6 @@
             "TargetName" = "8:crusader_attack_10003.png"
             "Tag" = "8:"
             "Folder" = "8:_F26A5C0B0E264163A02D41D910D1C209"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_326F79F417E3487FB626E9A2D7CA8B5D"
-            {
-            "SourcePath" = "8:..\\CAUisometric\\img\\bullets\\All_Fire_Bullet_Pixel\\ice_bullet.png"
-            "TargetName" = "8:ice_bullet.png"
-            "Tag" = "8:"
-            "Folder" = "8:_D30D3F1A8FC4407A844BF37E1B4412BD"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -6380,6 +6536,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3AF3340402834D96A344A3357D4DD670"
+            {
+            "SourcePath" = "8:..\\CAUisometric\\img\\bullets\\All_Fire_Bullet_Pixel\\mint_bullet.png"
+            "TargetName" = "8:mint_bullet.png"
+            "Tag" = "8:"
+            "Folder" = "8:_D30D3F1A8FC4407A844BF37E1B4412BD"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3AF4A1E5FC8A46B7AC9F4E75FABC71FF"
             {
             "SourcePath" = "8:..\\CAUisometric\\img\\players\\isometric_Mini-Crusader\\run\\crusader_run_20010.png"
@@ -6560,6 +6736,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3E27B14BDC724129B8D0C39BAB4D397C"
+            {
+            "SourcePath" = "8:..\\CAUisometric\\sounds\\bgm\\Over.mp3"
+            "TargetName" = "8:Over.mp3"
+            "Tag" = "8:"
+            "Folder" = "8:_14E64E847DB74D5BAE0355D1C631916C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3F449B5BF8A04947925A799ABFA26F65"
             {
             "SourcePath" = "8:..\\CAUisometric\\img\\players\\isometric_Mini-Crusader\\attack\\crusader_attack_00001.png"
@@ -6586,26 +6782,6 @@
             "TargetName" = "8:crusader_block_00006.png"
             "Tag" = "8:"
             "Folder" = "8:_1682CDD63E2A4AED842D2ABCEFD1667D"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_42B8312548254473A20B348479061406"
-            {
-            "SourcePath" = "8:..\\CAUisometric\\img\\mainScene.png"
-            "TargetName" = "8:mainScene.png"
-            "Tag" = "8:"
-            "Folder" = "8:_B8107E7554C04D6182B658F9A6010D44"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -6900,6 +7076,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_48CE07D9269D4096AD606DED3263DB8D"
+            {
+            "SourcePath" = "8:..\\CAUisometric\\sounds\\effect\\Fail.mp3"
+            "TargetName" = "8:Fail.mp3"
+            "Tag" = "8:"
+            "Folder" = "8:_95D922152B764FDFB8FE628D1E16EF48"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_498792D9E6F841809EAB35172B14B425"
             {
             "SourcePath" = "8:..\\CAUisometric\\img\\players\\isometric_Mini-Crusader\\attack\\crusader_attack_20004.png"
@@ -7166,6 +7362,26 @@
             "TargetName" = "8:CassetteTape.png"
             "Tag" = "8:"
             "Folder" = "8:_5D12BDC286304E3A97C12FBD286DD756"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4FE408BDDAAF4947939692D39CCE903A"
+            {
+            "SourcePath" = "8:..\\CAUisometric\\img\\bullets\\All_Fire_Bullet_Pixel\\ice_bullet.png"
+            "TargetName" = "8:ice_bullet.png"
+            "Tag" = "8:"
+            "Folder" = "8:_D30D3F1A8FC4407A844BF37E1B4412BD"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -7580,6 +7796,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_58E153B8E26544BC9BB040A81F982479"
+            {
+            "SourcePath" = "8:..\\CAUisometric\\img\\door\\portal_2.png"
+            "TargetName" = "8:portal_2.png"
+            "Tag" = "8:"
+            "Folder" = "8:_998348EDA3484E8993962DB86B28493C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_59611CF516534503862279E31ED3DF15"
             {
             "SourcePath" = "8:..\\CAUisometric\\img\\players\\isometric_Mini-Crusader\\block\\crusader_block_30007.png"
@@ -7620,6 +7856,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_59F88BC8B62348C898829F73AD2ADDF4"
+            {
+            "SourcePath" = "8:..\\CAUisometric\\img\\clearScene.png"
+            "TargetName" = "8:clearScene.png"
+            "Tag" = "8:"
+            "Folder" = "8:_B8107E7554C04D6182B658F9A6010D44"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5AB748F07C714D579153E7664C9EA5BD"
             {
             "SourcePath" = "8:..\\CAUisometric\\img\\players\\isometric_Mini-Crusader\\run\\crusader_run_00005.png"
@@ -7646,6 +7902,26 @@
             "TargetName" = "8:crusader_run_00007.png"
             "Tag" = "8:"
             "Folder" = "8:_A1073110D64446508EF8A606A8C2FD5F"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5B2664707AC84079995FFE728958616F"
+            {
+            "SourcePath" = "8:..\\CAUisometric\\img\\loading.png"
+            "TargetName" = "8:loading.png"
+            "Tag" = "8:"
+            "Folder" = "8:_B8107E7554C04D6182B658F9A6010D44"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -8400,6 +8676,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6CA54FA3DD1041779D370BEB2F7F127A"
+            {
+            "SourcePath" = "8:..\\CAUisometric\\img\\bullets\\All_Fire_Bullet_Pixel\\source.txt"
+            "TargetName" = "8:source.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_D30D3F1A8FC4407A844BF37E1B4412BD"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6CD43516B3D74D1B903C7A8C8BF5986D"
             {
             "SourcePath" = "8:..\\CAUisometric\\img\\players\\isometric_Mini-Crusader\\idle\\crusader_idle_60003.png"
@@ -9140,6 +9436,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7C41BC7C8DA54483A6FAB86407111931"
+            {
+            "SourcePath" = "8:..\\CAUisometric\\img\\heart.png"
+            "TargetName" = "8:heart.png"
+            "Tag" = "8:"
+            "Folder" = "8:_B8107E7554C04D6182B658F9A6010D44"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_7C82AD99B8974823BEA36F792FE979FF"
             {
             "SourcePath" = "8:..\\CAUisometric\\img\\players\\isometric_Mini-Crusader\\block\\crusader_block_20013.png"
@@ -9280,6 +9596,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_80AD651A06214B30947527CE7ADE1CC5"
+            {
+            "SourcePath" = "8:..\\CAUisometric\\img\\bullets\\All_Fire_Bullet_Pixel\\red_bullet.png"
+            "TargetName" = "8:red_bullet.png"
+            "Tag" = "8:"
+            "Folder" = "8:_D30D3F1A8FC4407A844BF37E1B4412BD"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_80E66A8491514AE7B48B02076FAA216C"
             {
             "SourcePath" = "8:..\\CAUisometric\\img\\players\\isometric_Mini-Crusader\\attack\\crusader_attack_30001.png"
@@ -9346,6 +9682,26 @@
             "TargetName" = "8:crusader_block_30000.png"
             "Tag" = "8:"
             "Folder" = "8:_1682CDD63E2A4AED842D2ABCEFD1667D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_820F6F601C6844CEB96831F5B46F6419"
+            {
+            "SourcePath" = "8:..\\CAUisometric\\img\\tiles\\License.txt"
+            "TargetName" = "8:License.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_59578652BFE341C399ED8DAA115F8CE0"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -10020,12 +10376,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_90787D0E53EB4BE6898483C9AB7A3300"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_9074D0E35AF04334B32C81ADFC3D068A"
             {
-            "SourcePath" = "8:..\\CAUisometric\\img\\players\\isometric_Mini-Crusader\\block\\crusader_block_70008.png"
-            "TargetName" = "8:crusader_block_70008.png"
+            "SourcePath" = "8:..\\CAUisometric\\sounds\\effect\\ShootBullet.mp3"
+            "TargetName" = "8:ShootBullet.mp3"
             "Tag" = "8:"
-            "Folder" = "8:_1682CDD63E2A4AED842D2ABCEFD1667D"
+            "Folder" = "8:_95D922152B764FDFB8FE628D1E16EF48"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -10040,12 +10396,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_90D8A2D67EF146D3B22D3418FC59A3E5"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_90787D0E53EB4BE6898483C9AB7A3300"
             {
-            "SourcePath" = "8:..\\CAUisometric\\img\\bullets\\All_Fire_Bullet_Pixel\\purple_bullet.png"
-            "TargetName" = "8:purple_bullet.png"
+            "SourcePath" = "8:..\\CAUisometric\\img\\players\\isometric_Mini-Crusader\\block\\crusader_block_70008.png"
+            "TargetName" = "8:crusader_block_70008.png"
             "Tag" = "8:"
-            "Folder" = "8:_D30D3F1A8FC4407A844BF37E1B4412BD"
+            "Folder" = "8:_1682CDD63E2A4AED842D2ABCEFD1667D"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -10140,6 +10496,46 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_91973E34126E401F9BB4D48C05A03965"
+            {
+            "SourcePath" = "8:..\\CAUisometric\\sounds\\bgm\\Source.txt"
+            "TargetName" = "8:Source.txt"
+            "Tag" = "8:"
+            "Folder" = "8:_14E64E847DB74D5BAE0355D1C631916C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_91B9CF3AFE3A4720B8309B67BAC1A79E"
+            {
+            "SourcePath" = "8:..\\CAUisometric\\img\\blackScene.png"
+            "TargetName" = "8:blackScene.png"
+            "Tag" = "8:"
+            "Folder" = "8:_B8107E7554C04D6182B658F9A6010D44"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_922FE9A1E0964FBBB9119054EC5E1AC4"
             {
             "SourcePath" = "8:..\\CAUisometric\\img\\players\\isometric_Mini-Crusader\\idle\\crusader_idle_40013.png"
@@ -10186,6 +10582,26 @@
             "TargetName" = "8:crusader_run_30013.png"
             "Tag" = "8:"
             "Folder" = "8:_A1073110D64446508EF8A606A8C2FD5F"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_93982EC105CD412C8E2B80B7CF9BA292"
+            {
+            "SourcePath" = "8:..\\CAUisometric\\sounds\\bgm\\GameClear.mp3"
+            "TargetName" = "8:GameClear.mp3"
+            "Tag" = "8:"
+            "Folder" = "8:_14E64E847DB74D5BAE0355D1C631916C"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -10940,6 +11356,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A3896280881F45BAB7E4F968219774D2"
+            {
+            "SourcePath" = "8:..\\CAUisometric\\sounds\\bgm\\InGame1.mp3"
+            "TargetName" = "8:InGame1.mp3"
+            "Tag" = "8:"
+            "Folder" = "8:_14E64E847DB74D5BAE0355D1C631916C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A3BADC5EE0CD4C5299DA52C4B96312FD"
             {
             "SourcePath" = "8:..\\CAUisometric\\img\\players\\isometric_Mini-Crusader\\attack\\crusader_attack_20016.png"
@@ -11646,6 +12082,26 @@
             "TargetName" = "8:crusader_attack_60001.png"
             "Tag" = "8:"
             "Folder" = "8:_F26A5C0B0E264163A02D41D910D1C209"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B18FD5C5E0374DFA90FD96DC2673A024"
+            {
+            "SourcePath" = "8:..\\CAUisometric\\img\\bullets\\All_Fire_Bullet_Pixel\\white_bullet.png"
+            "TargetName" = "8:white_bullet.png"
+            "Tag" = "8:"
+            "Folder" = "8:_D30D3F1A8FC4407A844BF37E1B4412BD"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -12420,26 +12876,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C10AD9A9F8C54B4A992D4E68C206FE33"
-            {
-            "SourcePath" = "8:..\\CAUisometric\\img\\heart.png"
-            "TargetName" = "8:heart.png"
-            "Tag" = "8:"
-            "Folder" = "8:_B8107E7554C04D6182B658F9A6010D44"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C188D89DCDD14BC18DE349908FAC0B36"
             {
             "SourcePath" = "8:..\\CAUisometric\\img\\buttons\\menu.png"
@@ -12666,6 +13102,26 @@
             "TargetName" = "8:crusader_idle_40000.png"
             "Tag" = "8:"
             "Folder" = "8:_58A068BB63534E1CA231252A220502C7"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C66DD42545264E8DBBF721E8A7369107"
+            {
+            "SourcePath" = "8:..\\CAUisometric\\sounds\\effect\\Shield.mp3"
+            "TargetName" = "8:Shield.mp3"
+            "Tag" = "8:"
+            "Folder" = "8:_95D922152B764FDFB8FE628D1E16EF48"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -13020,26 +13476,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D055E427F02F4591BF5A2177F7EA4FCC"
-            {
-            "SourcePath" = "8:..\\CAUisometric\\img\\bullets\\All_Fire_Bullet_Pixel\\gray_bullet.png"
-            "TargetName" = "8:gray_bullet.png"
-            "Tag" = "8:"
-            "Folder" = "8:_D30D3F1A8FC4407A844BF37E1B4412BD"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D09418243F1349158A9CEBAC49862E91"
             {
             "SourcePath" = "8:..\\CAUisometric\\img\\players\\isometric_Mini-Crusader\\run\\crusader_run_70012.png"
@@ -13106,6 +13542,26 @@
             "TargetName" = "8:crusader_block_30012.png"
             "Tag" = "8:"
             "Folder" = "8:_1682CDD63E2A4AED842D2ABCEFD1667D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D260BDD15F3441DEB9B2B380CC2776D3"
+            {
+            "SourcePath" = "8:..\\CAUisometric\\sounds\\effect\\Hit.mp3"
+            "TargetName" = "8:Hit.mp3"
+            "Tag" = "8:"
+            "Folder" = "8:_95D922152B764FDFB8FE628D1E16EF48"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -13440,52 +13896,12 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D78F35D9461943BA95F805046E3F39F2"
-            {
-            "SourcePath" = "8:..\\CAUisometric\\img\\bullets\\All_Fire_Bullet_Pixel\\white_bullet.png"
-            "TargetName" = "8:white_bullet.png"
-            "Tag" = "8:"
-            "Folder" = "8:_D30D3F1A8FC4407A844BF37E1B4412BD"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D7B302722E2E42F587B92F440A066699"
             {
             "SourcePath" = "8:..\\CAUisometric\\img\\players\\isometric_Mini-Crusader\\run\\crusader_run_60008.png"
             "TargetName" = "8:crusader_run_60008.png"
             "Tag" = "8:"
             "Folder" = "8:_A1073110D64446508EF8A606A8C2FD5F"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D7C4AC69FCED4B959629B84CAD0E2569"
-            {
-            "SourcePath" = "8:..\\CAUisometric\\img\\turret.png"
-            "TargetName" = "8:turret.png"
-            "Tag" = "8:"
-            "Folder" = "8:_B8107E7554C04D6182B658F9A6010D44"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -13720,6 +14136,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DA23070DDB7B42FA94D0BD80B6D4F692"
+            {
+            "SourcePath" = "8:..\\CAUisometric\\img\\turret.png"
+            "TargetName" = "8:turret.png"
+            "Tag" = "8:"
+            "Folder" = "8:_B8107E7554C04D6182B658F9A6010D44"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DAD087EC50FA400FA562C094B18D3CDE"
             {
             "SourcePath" = "8:..\\CAUisometric\\img\\players\\isometric_Mini-Crusader\\idle\\crusader_idle_30014.png"
@@ -13746,6 +14182,26 @@
             "TargetName" = "8:crusader_idle_40004.png"
             "Tag" = "8:"
             "Folder" = "8:_58A068BB63534E1CA231252A220502C7"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DAF771242493494BB82CACFF16EE2F03"
+            {
+            "SourcePath" = "8:..\\CAUisometric\\img\\moveanimation.png"
+            "TargetName" = "8:moveanimation.png"
+            "Tag" = "8:"
+            "Folder" = "8:_B8107E7554C04D6182B658F9A6010D44"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -13800,26 +14256,6 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DD0B1DD1B3AB44C599A85A74800F506C"
-            {
-            "SourcePath" = "8:..\\CAUisometric\\img\\bullets\\All_Fire_Bullet_Pixel\\red_bullet.png"
-            "TargetName" = "8:red_bullet.png"
-            "Tag" = "8:"
-            "Folder" = "8:_D30D3F1A8FC4407A844BF37E1B4412BD"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DD9733609E1C49828B5BAA26A6B536FD"
             {
             "SourcePath" = "8:C:\\Program Files (x86)\\Bosornd\\Bangtal\\bin\\OpenAL32.dll"
@@ -13846,26 +14282,6 @@
             "TargetName" = "8:glew32.dll"
             "Tag" = "8:"
             "Folder" = "8:_45408634158C480B9C66DC76A98F7384"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DF2CDA2B3A704D2F8DB04F92B0A6F04F"
-            {
-            "SourcePath" = "8:..\\CAUisometric\\img\\moveanimation.png"
-            "TargetName" = "8:moveanimation.png"
-            "Tag" = "8:"
-            "Folder" = "8:_B8107E7554C04D6182B658F9A6010D44"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -14206,6 +14622,26 @@
             "TargetName" = "8:libvorbisfile.dll"
             "Tag" = "8:"
             "Folder" = "8:_45408634158C480B9C66DC76A98F7384"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E611DA2DA9324E2BA487BBCE65616FA4"
+            {
+            "SourcePath" = "8:..\\CAUisometric\\sounds\\bgm\\InGame2.mp3"
+            "TargetName" = "8:InGame2.mp3"
+            "Tag" = "8:"
+            "Folder" = "8:_14E64E847DB74D5BAE0355D1C631916C"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -14920,6 +15356,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F1E34038FCDD4ED18E0BD7B4E46DF85A"
+            {
+            "SourcePath" = "8:..\\CAUisometric\\sounds\\effect\\ButtonClick.mp3"
+            "TargetName" = "8:ButtonClick.mp3"
+            "Tag" = "8:"
+            "Folder" = "8:_95D922152B764FDFB8FE628D1E16EF48"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F414EC8511A944CEBC447BA62FB7495F"
             {
             "SourcePath" = "8:..\\CAUisometric\\img\\players\\isometric_Mini-Crusader\\block\\crusader_block_60000.png"
@@ -15060,6 +15516,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F5973964B7BF462B837478B7C3F9AB8D"
+            {
+            "SourcePath" = "8:..\\CAUisometric\\img\\bullets\\All_Fire_Bullet_Pixel\\gray_bullet.png"
+            "TargetName" = "8:gray_bullet.png"
+            "Tag" = "8:"
+            "Folder" = "8:_D30D3F1A8FC4407A844BF37E1B4412BD"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F5CE6436A1DD4F3EA273E41EBE485C67"
             {
             "SourcePath" = "8:..\\CAUisometric\\img\\players\\isometric_Mini-Crusader\\idle\\crusader_idle_20014.png"
@@ -15086,6 +15562,26 @@
             "TargetName" = "8:crusader_idle_10000.png"
             "Tag" = "8:"
             "Folder" = "8:_58A068BB63534E1CA231252A220502C7"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F64074A8B53F4DFE8AB2B804E8A30C8B"
+            {
+            "SourcePath" = "8:..\\CAUisometric\\img\\door\\portal_1.png"
+            "TargetName" = "8:portal_1.png"
+            "Tag" = "8:"
+            "Folder" = "8:_998348EDA3484E8993962DB86B28493C"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -15146,6 +15642,26 @@
             "TargetName" = "8:crusader_attack_60004.png"
             "Tag" = "8:"
             "Folder" = "8:_F26A5C0B0E264163A02D41D910D1C209"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F8481D1E1BF745F1871489DFCF2C41F4"
+            {
+            "SourcePath" = "8:..\\CAUisometric\\sounds\\effect\\Attack.mp3"
+            "TargetName" = "8:Attack.mp3"
+            "Tag" = "8:"
+            "Folder" = "8:_95D922152B764FDFB8FE628D1E16EF48"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -15286,6 +15802,26 @@
             "TargetName" = "8:crusader_block_50007.png"
             "Tag" = "8:"
             "Folder" = "8:_1682CDD63E2A4AED842D2ABCEFD1667D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_FB170C6692374B84B8DA87A995172F25"
+            {
+            "SourcePath" = "8:..\\CAUisometric\\img\\bullets\\All_Fire_Bullet_Pixel\\purple_bullet.png"
+            "TargetName" = "8:purple_bullet.png"
+            "Tag" = "8:"
+            "Folder" = "8:_D30D3F1A8FC4407A844BF37E1B4412BD"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -15465,6 +16001,28 @@
                     "Property" = "8:_BB1E4DCFCC31466DAF5AC39D20821746"
                         "Folders"
                         {
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_14E64E847DB74D5BAE0355D1C631916C"
+                            {
+                            "Name" = "8:bgm"
+                            "AlwaysCreate" = "11:FALSE"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "Property" = "8:_4BC0B51BC291416CABDAD0939C158E9C"
+                                "Folders"
+                                {
+                                }
+                            }
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_95D922152B764FDFB8FE628D1E16EF48"
+                            {
+                            "Name" = "8:effect"
+                            "AlwaysCreate" = "11:FALSE"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "Property" = "8:_6F016B4B249F49D0B98DC9715F9FA313"
+                                "Folders"
+                                {
+                                }
+                            }
                         }
                     }
                     "{9EF0B969-E518-4E46-987F-47570745A589}:_5D12BDC286304E3A97C12FBD286DD756"
@@ -15617,6 +16175,17 @@
                                         {
                                         }
                                     }
+                                }
+                            }
+                            "{9EF0B969-E518-4E46-987F-47570745A589}:_998348EDA3484E8993962DB86B28493C"
+                            {
+                            "Name" = "8:door"
+                            "AlwaysCreate" = "11:FALSE"
+                            "Condition" = "8:"
+                            "Transitive" = "11:FALSE"
+                            "Property" = "8:_D8F873B736EC4A36AFEA6808AD7507D0"
+                                "Folders"
+                                {
                                 }
                             }
                         }
@@ -16211,7 +16780,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_78303EB332144FF3B51D5D7EEF4EF050"
             {
-            "SourcePath" = "8:..\\Release\\CAUisometric.exe"
+            "SourcePath" = "8:..\\Debug\\CAUisometric.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_45408634158C480B9C66DC76A98F7384"

@@ -1,0 +1,4 @@
+Sword.mp3 : http://youtube.com/watch?v=8Zw1_2xZUPA
+Shield.mp3 : https://www.youtube.com/watch?v=1LuNPBbSg4A
+Attack.mp3 : https://cicifyre.itch.io/
+Damaged.mp3 : https://cicifyre.itch.io/

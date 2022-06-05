@@ -8,6 +8,7 @@
 #define SCALE 3.0f
 #define BLOCK_LIMIT 50
 
+#define PLAYER_MAX_HEART 5
 #define PLAYER_SCALE (0.6f*SCALE/2)
 #define PLAYER_WIDTH (70*PLAYER_SCALE)
 #define PLAYER_HEIGHT (153*PLAYER_SCALE)
@@ -40,7 +41,6 @@
 
 #define PI 3.14159
 // unit is sec
-#define TURRET_FIRE_LATE (3)
+#define TURRET_FIRE_LATE (MAX_LEVEL*2)
 #define TurretRange 500
 #define PlayerRange 500
-#define DoorRange 10

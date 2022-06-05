@@ -4,14 +4,15 @@ extern int level;
 extern SceneID gameScene[MAX_LEVEL];
 extern Bullet bullets[MAX_NUMBER_OF_BULLET];
 
+extern SoundID bullet_sound;
 
 TimerID bullet_timer;
 
 const char* BULLET_IMAGES[] = {
 	"img/bullets/All_Fire_Bullet_Pixel/mint_bullet.png",
-	"img/bullets/All_Fire_Bullet_Pixel/ice_bullet.png",
-	"img/bullets/All_Fire_Bullet_Pixel/gray_bullet.png",
 	"img/bullets/All_Fire_Bullet_Pixel/purple_bullet.png",
+	"img/bullets/All_Fire_Bullet_Pixel/gray_bullet.png",
+	"img/bullets/All_Fire_Bullet_Pixel/ice_bullet.png",
 	"img/bullets/All_Fire_Bullet_Pixel/red_bullet.png",
 	"img/bullets/All_Fire_Bullet_Pixel/white_bullet.png"
 };
@@ -57,9 +58,11 @@ void SetBullet(const int x, const int y, const int speed, const Vec2d direction_
 	//bullets[i].direction_vec = { direction_vec.x, direction_vec.y};
 	bullets[i].is_deleted = false;
 
+	setObjectImage(bullets[i].obj, BULLET_IMAGES[level]);
 	scaleObject(bullets[i].obj, SCALE / 2);
 	locateObject(bullets[i].obj, gameScene[level], x, y);
 	showObject(bullets[i].obj);
+	playSound(bullet_sound);
 }
 
 void ChangeBulletType(BulletType type, int i)

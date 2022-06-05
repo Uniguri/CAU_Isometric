@@ -1,0 +1,5 @@
+Start.mp3 : Monster Hunter World OST: Main Menu Theme
+InGame1.mp3 : Monster Hunter World OST: Proof of a Hero (Extended)
+InGame2.mp3 : Monster Hunter World OST: Ancient Forest Battle Theme
+Over.mp3 : Dark Souls 3 OST Main Theme
+GameClear.mp3 : Monster Hunter World OST: Quest Clear Theme

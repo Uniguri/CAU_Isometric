@@ -580,6 +580,8 @@
     <Image Include="img\bullets\All_Fire_Bullet_Pixel\purple_bullet.png" />
     <Image Include="img\bullets\All_Fire_Bullet_Pixel\red_bullet.png" />
     <Image Include="img\bullets\All_Fire_Bullet_Pixel\white_bullet.png" />
+    <Image Include="img\door\portal_1.png" />
+    <Image Include="img\door\portal_2.png" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="sounds\GameClear.mp3" />

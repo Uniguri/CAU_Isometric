@@ -6,8 +6,9 @@ extern int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1], level;
 extern SceneID gameScene[MAX_LEVEL];
 extern Bullet bullets[100];
 extern Turret turrets[MAX_LEVEL][MAX_NUMBER_OF_TURRET];
+extern SoundID hit_sound;
 extern Player player;
-extern int turretCnt[MAX_LEVEL], hiddenCnt;
+extern int turretCnt[MAX_LEVEL], hiddenCnt[MAX_LEVEL];
 
 void InitTurret() {
     srand(time(NULL));
@@ -30,7 +31,7 @@ void InitTurret() {
                         turrets[m][idx].y = i;
                         turrets[m][idx].inner_x = tmp.x;
                         turrets[m][idx].inner_y = tmp.y;
-                        turrets[m][idx].fire_late = TURRET_FIRE_LATE;
+                        turrets[m][idx].fire_late = TURRET_FIRE_LATE/(m+1);
                         turrets[m][idx].last_fire_time = time(NULL);
                         Coord loc = TransformCoord(turrets[m][idx].x, turrets[m][idx].y, turrets[m][idx].inner_x, turrets[m][idx].inner_y, 0, 0);
                         locateObject(turrets[m][idx].obj, turrets[m][idx].scene, loc.x, loc.y);
@@ -83,7 +84,9 @@ bool isnearPlayer(const int dx, const int dy, int range, int i) {
 void isTurretHitted(int i) {
     turrets[level][i].active = false;
     hideObject(turrets[level][i].obj);
-    hiddenCnt++;
-    if (hiddenCnt == turretCnt[level])ActiveDoor();
+    playSound(hit_sound);
+    hiddenCnt[level]++;
+    if (hiddenCnt[level] >= turretCnt[level])
+        ActiveDoor();
     return;
 }

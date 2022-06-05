@@ -7,10 +7,11 @@ extern int base[MAX_LEVEL][BASE_Y + 1][BASE_X + 1], level;
 extern Player player;
 extern SceneID gameScene[MAX_LEVEL];
 extern SceneID gameover_scene;
+extern SoundID sword_sound, shield_sound, attack_sound, damage_sound;
 extern Bullet bullets[100];
 extern Turret turrets[MAX_LEVEL][MAX_NUMBER_OF_TURRET];
 extern heart_struct heart;
-extern int turretCnt[MAX_LEVEL];
+extern int turretCnt[MAX_LEVEL], hiddenCnt[MAX_LEVEL];
 
 const char* const PlayerIdleImages[DirectionOfPlayerFace::DIRECTION_OF_PLAYER_FACE_SIZE][NUMBER_OF_PLAYER_IDLE_IMAGE_FOR_EACH_DIR] =
 {
@@ -618,7 +619,7 @@ bool isMovingLevel = false;
 
 void heart_function() {
     heart.scene = gameScene[level];
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < PLAYER_MAX_HEART; i++) {
         heart.heart[i] = createObject("img/heart.png");
         locateObject(heart.heart[i], heart.scene, heart.heart_x[i], heart.heart_y);
 
@@ -635,7 +636,7 @@ void ShowHeart() {
 
 // knockback
 void MinusHeart() {
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < PLAYER_MAX_HEART; i++) {
         if (heart.num_heart == i)
             hideObject(heart.heart[i]);
     }
@@ -847,6 +848,7 @@ void PlayerKeyboardCallback(KeyCode code, KeyState state) {
         {
             player.state = PlayerState::ATTACK;
             player.image_frame = 0;
+            playSound(attack_sound);
         }
     }
     else if (code == KeyCode::KEY_S)
@@ -896,7 +898,7 @@ void PlayerKeyboardCallback(KeyCode code, KeyState state) {
 void RefreshPlayer()
 {
     ++player.image_frame_counter;
-    if (player.image_frame_counter <= 3)
+    if (player.image_frame_counter <= 2)
         return;
 
     player.image_frame_counter = 0;
@@ -914,6 +916,9 @@ void RefreshPlayer()
         setObjectImage(player.obj, PlayerMoveImages[player.direction][player.image_frame]);
         break;
     case PlayerState::ATTACK:
+        if(player.image_frame == 10)
+            playSound(sword_sound);
+
         if (player.image_frame == NUMBER_OF_PLAYER_ATTACK_IMAGE_FOR_EACH_DIR - 5) {
             for (int i = 0; i < MAX_NUMBER_OF_BULLET; i++) {
                 if (turrets[level][i].obj == 0)
@@ -1026,6 +1031,8 @@ void PlayerTimerCallback(TimerID timer) {
             index_of_bullet = DoPlayerBlock();
             if (index_of_bullet != -1)
             {
+                playSound(shield_sound);
+
                 int dx = PLAYER_BASIC_X - bullets[index_of_bullet].x;
                 int dy = PLAYER_BASIC_Y - bullets[index_of_bullet].y;
                 double len = sqrt(pow(dx, 2) + pow(dy, 2));
@@ -1052,6 +1059,8 @@ void PlayerTimerCallback(TimerID timer) {
         index_of_bullet = IsPlayerHitted();
         if (index_of_bullet != -1)
         {
+            playSound(damage_sound);
+
             MinusHeart();
             int dx = PLAYER_BASIC_X - bullets[index_of_bullet].x;
             int dy = PLAYER_BASIC_Y - bullets[index_of_bullet].y;
@@ -1135,5 +1144,15 @@ void MoveLevelAnimation() {
     showObject(player.obj);
     startTimer(moveAnimationTimer);
     heart_function();
+
+    for (int i = 0; i < MAX_NUMBER_OF_TURRET; i++)
+    {
+        if (!turrets[i])
+            continue;
+        turrets[level][i].active = true;
+        showObject(turrets[level][i].obj);
+    }
+    hiddenCnt[level] = 0;
+
     enterScene(moveScene);
 }

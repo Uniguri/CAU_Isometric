@@ -17,3 +17,4 @@ void mouseCallback(ObjectID obj, int x, int y, MouseAction action);
 
 void StartSceneMCB(ObjectID obj, int x, int y, MouseAction action);
 void GameOverSceneMCB(ObjectID obj, int x, int y, MouseAction action);
+void ClearSceneMCB(ObjectID obj, int x, int y, MouseAction action);

@@ -21,5 +21,4 @@ void MakeMap();
 void MoveMap(int dx, int dy);
 void MakeDoor();
 void MoveDoor(const int dx, const int dy);
-bool isnearDoor(const int dx, const int dy, int range);
 void ActiveDoor();
