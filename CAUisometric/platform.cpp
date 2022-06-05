@@ -97,7 +97,6 @@ void MakeDoor() {
 
 void MoveDoor(const int dx, const int dy) {
 	Coord loc = TransformCoord(door[level].x, door[level].y, door[level].inner_x, door[level].inner_y, dx, dy);
-	printf("%d %d %d %d\n", door[level].x, door[level].y, loc.x, loc.y);
 	locateObject(door[level].obj, door[level].scene, loc.x, loc.y);
 	if (isnearDoor(player.x, player.y, DoorRange)) {
 		if (door[level].active) {

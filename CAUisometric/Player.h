@@ -1,6 +1,5 @@
 #pragma once
 #include <bangtal.h>
-#include <stdio.h>
 #include "constant_value.h"
 #include "main.h"
 #include "bullet.h"

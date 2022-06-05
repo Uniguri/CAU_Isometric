@@ -8,7 +8,7 @@ SceneID gameScene[MAX_LEVEL] = {0};
 SceneID loading_scene;
 SceneID start_scene, gameover_scene;
 ObjectID loading_image;
-ObjectID start_button, end_button1, restart_button, menu_button,end_button2;
+ObjectID start_button, end_button1, restart_button, end_button2;
 Door door[MAX_LEVEL];
 
 TimerID loading_timer;
@@ -74,11 +74,8 @@ void GameSetting(void)
 	restart_button = createObject("img/buttons/restart.png");
 	locateObject(restart_button, gameover_scene, 547, 200);
 	showObject(restart_button);
-	menu_button = createObject("img/buttons/menu.png");
-	locateObject(menu_button, gameover_scene, 547, 150);
-	showObject(menu_button);
 	end_button2 = createObject("img/buttons/end.png");
-	locateObject(end_button2, gameover_scene, 547, 100);
+	locateObject(end_button2, gameover_scene, 547, 150);
 	showObject(end_button2);
 
 	setMouseCallback(StartSceneMCB);
@@ -178,12 +175,6 @@ void GameOverSceneMCB(ObjectID obj, int x, int y, MouseAction action)
 		setTimerCallback(timerCallback);
 
 		enterScene(gameScene[level]);
-		return;
-	}
-	else if (obj == menu_button)
-	{
-		setMouseCallback(StartSceneMCB);
-		enterScene(start_scene);
 		return;
 	}
 	else if (obj == end_button2)

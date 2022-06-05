@@ -3,7 +3,6 @@
 #include <stdlib.h>
 #include <time.h>
 
-
 #include "constant_value.h"
 #include "utility.h"
 #include "Player.h"

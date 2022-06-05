@@ -641,7 +641,6 @@ void MinusHeart() {
     }
     if (heart.num_heart == 0)
     {
-        printf("Player is dead. The location of function is MinuxHeart.\n\n");
         player.is_dead = true;
     }
     heart.num_heart--;
@@ -1076,7 +1075,6 @@ void PlayerTimerCallback(TimerID timer) {
         }
         ShowHeart();
         if (IsOutOfMap() && !isMovingLevel) {
-            printf("Out of map: %lld, %ld\n", time(NULL), clock());
             if (level > 0) level--;
             isMovingLevel = true;
             MoveLevelAnimation();
