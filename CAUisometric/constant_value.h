@@ -6,7 +6,7 @@
 #define BASE_X 10
 #define CHUNK_SIZE 15
 #define SCALE 3.0f
-#define BLOCK_LIMIT 50
+#define BLOCK_LIMIT 15
 
 #define PLAYER_MAX_HEART 5
 #define PLAYER_SCALE (0.6f*SCALE/2)

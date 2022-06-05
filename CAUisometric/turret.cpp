@@ -18,9 +18,9 @@ void InitTurret() {
             for (int j = 1; j < BASE_X; j++) {
                 if (i == 1 && j == 1) continue;
                 if (base[m][i][j] == 1) {
-                    int pickCnt = rand() % 100, cnt = 1;
-                    if (pickCnt < 60) cnt = 3;
-                    else if (60 <= pickCnt && pickCnt < 80) cnt = 2;
+                    int pickCnt = rand() % 100, cnt = 3;
+                    if (pickCnt < 60) cnt = 1;
+                    else if (60 <= pickCnt && pickCnt < 90) cnt = 2;
 
                     turretCnt[m] += cnt;
                     for (int k = 0; k < cnt; k++) {
