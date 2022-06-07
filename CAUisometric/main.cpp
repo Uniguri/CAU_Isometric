@@ -24,6 +24,9 @@ Turret turrets[MAX_LEVEL][MAX_NUMBER_OF_TURRET] = {0};
 int turretCnt[MAX_LEVEL] = { 0 }, hiddenCnt[MAX_LEVEL] = { 0 };
 
 heart_struct heart;
+
+bool do_dead_inst = false;
+
 void LoadingTimerCallback(TimerID timer)
 {
 	if (timer == loading_timer)
@@ -146,8 +149,6 @@ void ResetGame(void)
 		hiddenCnt[i] = 0;
 }
 
-void NullTimerCallback(TimerID timer) {}
-
 void timerCallback(TimerID timer) {
 	PlayerTimerCallback(timer);
 
@@ -156,9 +157,10 @@ void timerCallback(TimerID timer) {
 	else
 		BulletTimerCallback(timer, -player.dx, -player.dy);
 	
-	if (player.is_dead)
+	if (player.is_dead && !do_dead_inst)
 	{
-		setTimerCallback(NullTimerCallback);
+		do_dead_inst = true;
+
 		stopSound(ingame_sound1);
 		stopSound(ingame_sound2);
 		playSound(over_sound, true);
@@ -193,6 +195,8 @@ void StartSceneMCB(ObjectID obj, int x, int y, MouseAction action)
 
 		playSound(ingame_sound1, true);
 
+		do_dead_inst = false;
+
 		enterScene(gameScene[level]);
 		return;
 	}
@@ -219,6 +223,8 @@ void GameOverSceneMCB(ObjectID obj, int x, int y, MouseAction action)
 		setTimerCallback(timerCallback);
 
 		playSound(ingame_sound1, true);
+
+		do_dead_inst = false;
 
 		enterScene(gameScene[level]);
 		return;
@@ -248,6 +254,8 @@ void ClearSceneMCB(ObjectID obj, int x, int y, MouseAction action)
 		setMouseCallback(mouseCallback);
 		setKeyboardCallback(keyboardCallback);
 		setTimerCallback(timerCallback);
+
+		do_dead_inst = false;
 
 		enterScene(gameScene[level]);
 		return;
